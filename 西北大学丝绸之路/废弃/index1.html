@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="zh-cn">
+<script type="text/javascript" src="../js/sczl/jquery.js"></script>
+<script type="text/javascript" src="js/sczl/slides.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/road.css">
+    <title></title>
+    <script type="text/javascript">
+        function AddFavorite() {
+            var sURL = document.location.href;
+            var sTitle = document.title;
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+<div class="main-bg">
+    <div class="min-nav">
+        <div class="content">
+            <div class="bdsharebuttonbox right">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a class="bds_count" data-cmd="count"></a>
+            </div>
+            <span>西北大学丝绸之路研究各领域成果展示窗口</span>
+        </div>
+    </div>
+    <div class="head">
+        <div class="content">
+            <div class="logo left"><img src="/pc/17/images/sczl/images/LOGO.png"></div>
+            <a href="#" class="msg-btn right ">给我留言</a>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="main-nav">
+            <ul class="content font-YH">
+                <li><a href="http://isrs.nwu.edu.cn" class="first-menu">首页</a></li>
+                <li>
+                    <a href="/home/index/articles/mid/320.html" class="first-menu  ">研究院概况</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/338.html">
+                            研究院简介 </a> |
+                        <a href="/home/index/articles/mid/383.html">
+                            研究院领导 </a> |
+                        <a href="/home/index/articles/mid/386.html">
+                            顾问委员会 </a> |
+                        <a href="/home/index/articles/mid/387.html">
+                            学术委员会 </a> |
+                        <a href="/home/index/articles/mid/388.html">
+                            办公室 </a> |
+                        <a href="/home/index/articles/mid/391.html">
+                            研究机构 </a> |
+                        <a href="/home/index/articles/mid/394.html">
+                            规章制度 </a> |
+                        <a href="/home/index/articles/mid/396.html">
+                            发展规划 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/322.html" class="first-menu  ">研究团队</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/378.html">
+                            首席专家 </a> |
+                        <a href="/home/index/articles/mid/379.html">
+                            合作研究专家 </a> |
+                        <a href="/home/index/articles/mid/381.html">
+                            院内研究人员 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/323.html" class="first-menu  ">新闻动态</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/373.html">
+                            最新信息 </a> |
+                        <a href="/home/index/articles/mid/375.html">
+                            通知公告 </a> |
+                        <a href="/home/index/articles/mid/377.html">
+                            会议纪要 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/326.html" class="first-menu  ">课题研究</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/368.html">
+                            课题规划 </a> |
+                        <a href="/home/index/articles/mid/369.html">
+                            在研课题 </a> |
+                        <a href="/home/index/articles/mid/371.html">
+                            研究成果 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/4310.html" class="first-menu  ">哈萨克斯坦研究中心</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/4429.html">
+                            科研人员 </a> |
+                        <a href="/home/index/articles/mid/4428.html">
+                            “一带一路”中哈作家研讨会 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/4311.html" class="first-menu  ">陕西高校一带一路智库联盟</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/331.html" class="first-menu  ">西北历史研究所</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/353.html">
+                            机构简介 </a> |
+                        <a href="/home/index/articles/mid/355.html">
+                            研究生培养 </a> |
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="main ">
+        <div class="content clearfix">
+
+            <div class="col-1">
+                <div class="col-1-l left">
+                    <div class="font-YH col-intro">
+                        <span>研究院概况</span>
+                    </div>
+                    <div class="col-intro-text">
+                        <div class="clearfix">
+                            <img src="/upload/cover/17/2016-12-29_5864ee728a8f2.jpg" alt="" class="photo2 left">
+                            <div class="col-intro-detail">
+                                <h2><a href="/home/index/article/id/6049/mid/673.html">研究院简介</a></h2>
+                                <p>
+
+
+                                    西北大学丝绸之路研究院是在西北大学西北历史研究所基础上于2014年1月正式挂牌成立的中国第 <a
+                                        href="/home/index/article/id/6049/mid/673.html">[阅读全文]</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <ul class="list-news pl14">
+                            <li>
+                                <a href="/home/index/articles/mid/323.html">
+                                    <span>[最新信息]</span>
+                                </a>
+                                <a href="/home/index/article/id/229589/mid/373.html">人民大学师生代表团访问我院</a>
+                            </li>
+                            <li>
+                                <a href="/home/index/articles/mid/323.html">
+                                    <span>[最新信息]</span>
+                                </a>
+                                <a href="/home/index/article/id/228640/mid/373.html">哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录</a>
+                            </li>
+                            <li>
+                                <a href="/home/index/articles/mid/323.html">
+                                    <span>[最新信息]</span>
+                                </a>
+                                <a href="/home/index/article/id/228639/mid/373.html">俄罗斯国际关系专家莉哈切娃到访丝绸之路研究院</a>
+                            </li>
+                            <li>
+                                <a href="/home/index/articles/mid/323.html">
+                                    <span>[最新信息]</span>
+                                </a><a href="/home/index/article/id/228377/mid/373.html">埃及《广播与电视》杂志总编辑到访丝绸之路研究院</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <script language="javascript" src="/pc/17/js/flashview.js"></script>
+
+
+                <div class="col-1-focus right " id="focusSlides">
+                    <div class="slides_container">
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2018-06-13_5b20bf96ba0b9_cover.jpg?v=1528872854531" alt=""
+                                width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2018-04-20_5ad96f51a6eeb_cover.png?v=1524200201915?v=1524200226286"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-10-13_59e0759d16338_cover.JPG?v=1507883074433?v=1507883126515"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf85e3cda2c_cover.jpg?v=1505723921447?v=1505723954058"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf6bf4c8f7d_cover.JPG?v=1505717270078?v=1505717329160"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf6e37a8cb1_cover.JPG?v=1505717839464?v=1505717874822"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf6d4058038_cover.JPG?v=1505717625570?v=1505717735291?v=1505717743889"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7cfc33a92_cover.JPG?v=1505721705828?v=1505721740296"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7c3e3f477_cover.JPG" alt="" width="660"
+                                height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7b9821980_cover.JPG?v=1505721301442?v=1505721341006"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7b2fc6807_cover.JPG?v=1505721154361?v=1505721188380"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7a6223316_cover.JPG?v=1505721015727?v=1505721059942"
+                                alt="" width="660" height="300" border="0"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-col  left">
+                <div class="main-col-1 clearfix ">
+                    <h2 class="font-YH">
+                        <span>丝路通讯</span>
+                    </h2>
+                    <div class="main-col-item left ml25">
+                        <h3 class="h2">
+                            <a href="/home/index/articles/mid/4313.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路要闻</span>
+                        </h3>
+                        <ul class="list-news pt15">
+                            <li><a href="/home/index/article/id/186261/mid/4313.html">十九大开幕习近平作报告 五次提及“一带一路”</a></li>
+                            <li><a href="/home/index/article/id/174676/mid/4313.html">“一带一路”国际合作高峰论坛硕果累累</a></li>
+                            <li><a href="/home/index/article/id/6511/mid/4313.html">“一带一路”引领对外合作潮流</a></li>
+                            <li><a href="/home/index/article/id/6510/mid/4313.html">全球经济治理的中国担当</a></li>
+                            <li><a href="/home/index/article/id/6509/mid/4313.html">专家：“一带一路”跨境金融合作需加强</a></li>
+                            <li><a href="/home/index/article/id/6508/mid/4313.html">巴林欲搭“一带一路”快车联接中东与中国</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="main-col-item left ml25">
+                        <h3 class="h2">
+                            <a href="/home/index/articles/mid/4314.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路论坛</span>
+                        </h3>
+                        <ul class="list-news pt15">
+                            <li><a href="/home/index/article/id/186257/mid/4314.html">卢山冰：探索陕西自贸试验区特色化发展新模式</a></li>
+                            <li><a href="/home/index/article/id/174680/mid/4314.html">陕西：主动融入“一带一路”大格局</a></li>
+                            <li><a href="/home/index/article/id/186262/mid/4314.html">专家：十九大后“一带一路”高位运行开启新征程</a></li>
+                            <li><a href="/home/index/article/id/174682/mid/4314.html">胡和平：为“一带一路”建设注入“陕西动力”</a></li>
+                            <li><a href="/home/index/article/id/174692/mid/4314.html">王永康：融入“一带一路”建设 加快大西安大发展</a></li>
+                            <li><a href="/home/index/article/id/6269/mid/4314.html">卢山冰:“一带一路”更多强调“走出去” </a></li>
+
+                        </ul>
+                    </div>
+                    <div class="main-col-item left ml25">
+                        <h3 class="h2">
+                            <a href="/home/index/articles/mid/4315.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路发展</span>
+                        </h3>
+                        <ul class="list-news pt15">
+                            <li><a href="/home/index/article/id/186264/mid/4315.html">《中国的北极政策》白皮书发表 共建“冰上丝绸之路”</a></li>
+                            <li><a href="/home/index/article/id/186263/mid/4315.html">2018年将推进21世纪海上丝绸之路建设</a></li>
+                            <li><a href="/home/index/article/id/6264/mid/4315.html">中韩丝绸之路研讨会：“一带一路”与“欧亚倡议”共赢发展</a></li>
+                            <li><a href="/home/index/article/id/6129/mid/4315.html">丝绸之路经济带的纵深背景与地缘战略</a></li>
+                            <li><a href="/home/index/article/id/6105/mid/4315.html">西安：丝路经济带上的"新起点"</a></li>
+                            <li><a href="/home/index/article/id/6103/mid/4315.html">卢山冰教授应邀主持区域经济发展论坛对话活动</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-col-2">
+                    <h2 class="h2">
+                        <span class="tips right">建设一带一路，推进区域合作</span>
+                        <span class="font-YH">丝绸之路经济带建设</span>
+                    </h2>
+                    <div class="main-col-2-text clearfix">
+                        <img src="/upload/appendix/17/2018-05-18_5afe8cb79fda8_cover.jpg?v=1526631559789?v=1526631597393"
+                             alt="" class="left jz-pic">
+                        <div class="main-col-2-info">
+                            <h2>“一带一路”海外工程项目巡礼</h2>
+                            <p style="display: -webkit-box;
+                     overflow: hidden;
+                     height: 156px ;
+                     text-overflow: ellipsis;
+                     word-break: break-all;
+                     -moz-box-orient: vertical;
+                     -webkit-line-clamp: 6;
+                     -moz-line-clamp: 6;">
+                                &nbsp; &nbsp; &nbsp; &nbsp;今年是“一带一路”国际合作高峰论坛举办一周年。
+                                　　2017年5月，论坛在北京的成功举办标志着共建“一带一路”倡议已经进入从理念到行动、从规划到实施的新阶段。&nbsp;“一带一路”倡议提出五年来，中国企业陆续走向海外，拓展国际市场，主持或承建了一大批基础设施项目。肯尼亚蒙内铁路、希腊比雷埃夫斯港、中巴经济走廊“两大”公路……这些项目都已有序推进或投入运营。
+                                　　如今，在“一带一路”沿线的“百花园”中，大批铁路、公路、港口、大桥和工业园区等基础设施项目都已破土动工，它们用中国智慧浇灌，绽放出鲜艳的花朵，焕发出勃勃生机，为改善沿线国家基础设施条件、带动当地经济社会发展发挥了积极作用。
+                                　　这是2017年7月6日俯拍的马尔代夫中马友谊大桥建设现场。中马友谊大桥于2016年初正式动工，是中马共建“一带一路”的重要合作项目。作为马尔代夫有史以来第一座大桥，同时也是印度洋上第一座跨海大桥，中马友谊大桥连通马尔代夫首都马累和机场岛，由桥梁、填海路堤及道路等组成，使用寿命100年。　　这是2018年2月22日拍摄的距离约旦首都安曼120公里的阿塔拉特油页岩电站项目现场。
+                                　　该项目由中国能源建设集团广东火电工程公司总承包。阿塔拉特油页岩电站预计将于2019年3月前后开始油页岩开采，当年8月完成首批1万吨开采计划。　　这是2017年12月1日航拍的喀麦隆曼维莱水电站。
+                                　　曼维莱水电站位于喀麦隆南部大区，由中国水利水电建设股份有限公司承建，项目总投资6.37亿美元。水电站实现输电后，将极大缓解喀麦隆电力不足问题。　　这是2017年10月12日，一组由驳船、运泥船和抓斗式疏浚船组成的清淤单元在乌克兰敖德萨州南方港施工。
+                                　　由中国港湾工程有限责任公司承揽，中国交建天津航道局有限公司承建的乌克兰南方港粮食码头疏浚工程2018年1月30日举行竣工签字仪式。南方港疏浚项目解决了该港口被淤泥阻塞多年的困扰，对乌克兰进一步扩大粮食出口具有战略意义。　　这是2018年4月6日在越南南部平顺省拍摄的永新燃煤电厂一期BOT项目的鸟瞰图。
+                                　　越南永新燃煤电厂一期BOT项目由中国南方电网投资，建成后将成为越南最先进的能源基地。　　这是2017年4月18日在阿尔及利亚首都阿尔及尔拍摄的机场新航站楼内景。
+                                　　由中国建筑工程总公司阿尔及利亚分公司承建的阿尔及尔机场新航站楼项目2014年底开工，预计2018年6月以后可以陆续交付。新航站楼具备国际民航协会A级标准，建成后将成为北非地区的航空枢纽。　　这是2018年1月8日拍摄的位于斯里兰卡中部的莫勒格哈坎达水库。
+                                　　由中国电建承建的莫勒格哈坎达水库项目是斯里兰卡最大规模的水利枢纽工程，于2012年7月开始建设，2017年7月全部完工。这一项目有助于斯里兰卡解决水资源分布不均和洪涝灾害等问题。　　这是2017年5月1日，在位于乌兹别克斯坦锡尔河州的鹏盛工业园区，工人在瓷砖生产车间工作。　　乌兹别克斯坦鹏盛工业园区位于乌兹别克斯坦锡尔河州，是中国民营企业直接在乌投资建立的首个中乌合资工业园区。　　这是2018年4月28日在马来西亚关丹港新深水码头拍摄的防波堤。
+                                　　为支撑配合马中关丹产业园区的发展，为入园项目提供优良的港口物流服务，广西北部湾国际港务集团有限公司入股关丹港后与马方合作伙伴一起加快了对关丹港进行升级改造。　　这是在白俄罗斯首都明斯克以东25公里处拍摄的中白工业园的资料照片。
+                                　　由中白两国国家元首倡建的中白工业园，是两国合作共建丝绸之路经济带的标志性工程。截至2017年底，该工业园已经吸引了来自中国、白俄罗斯、俄罗斯、美国、德国、奥地利和立陶宛的23家企业入驻，逐渐发展成为一个国际合作的良好平台。　　这是2017年9月8日在乌干达航拍的坎帕拉至恩德培国际机场高速公路。
+                                　　即将于2018年5月竣工通车的坎帕拉至恩德培高速公路，由中国交建负责设计施工，是乌干达第一条收费高速公路、第一条设计建设均采用中国规范和标准的高速公路。　　这是2017年11月5日，在阿拉伯联合酋长国阿布扎比，中远海运港口有限公司举行中远海运港口阿布扎比码头正式动工暨场站租赁签约仪式，标志着中国和阿联酋“一带一路”项目建设取得新进展。　　这是2018年2月1日在马来西亚马六甲航拍的马来西亚皇京港填海造地施工现场。
+                                　　按照规划，皇京港是一个集生态旅游、商业贸易、地产开发、深水码头和临海工业园建设为一体的综合性项目，中国电建负责吹砂回填、护岸及防波堤修建等工作。　　这是2017年11月28日，匈塞铁路塞尔维亚境内贝尔格莱德至旧帕佐瓦段举行开工仪式。
+                                　　匈塞铁路从匈牙利首都布达佩斯至塞尔维亚首都贝尔格莱德，全长350公里。该项目于2015年12月23日启动，由中国铁路总公司牵头组成的中国企业联合体承建。　　这是2017年12月13日在老挝万象省拍摄的旺门村二号隧道。
+                                　　中国电建水电十五局承建的旺门村二号隧道2017年12月12日顺利贯通，成为中老铁路项目全线首个贯通的隧道。&nbsp; </p>...
+
+                            　　<a href="/home/index/article/id/190708/mid/672.html" style="float:right;">[阅读全文]</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-col-3 clearfix">
+                    <div class="main-col-3-item">
+                        <h2 class="h2">
+                            <a href="/home/index/articles/mid/381.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">研究团队</span>
+                        </h2>
+                        <div class="col-intro-text">
+                            <div class="bd clearfix" style="max-height: 161px;">
+                                <img src="/upload/appendix/17/2017-08-04_59841639aca02_cover.jpg?v=1508217316079?v=1508217316100?v=1508217316117?v=1508217316129?v=1508217"
+                                     alt="" class="photo left">
+                                <div class="col-intro-detail clearfix">
+                                    <h2>特聘外籍专家亚历山大·卢金（ALEXANDER LUKIN）</h2>
+                                    <p class="h45" style="display: -webkit-box;
+                             overflow: hidden;
+                             text-overflow: ellipsis;
+                             word-break: break-all;
+                             -webkit-box-orient: vertical;
+                             -webkit-line-clamp: 6;">
+                                        亚历山大·卢金（ALEXANDER
+                                        LUKIN），俄罗斯高等经济研究大学国际关系学院教授，俄罗斯莫斯科国立国际关系学院东亚与上海合作组织研究中心主任，原俄罗斯外交学院副院长。牛津大学政治学博士，俄罗斯联邦外交部外交学院历史学博士，哈佛大学博士后。现为西北大学丝绸之路研究院特聘外籍专家。代表性论著：The
+                                        Political Culture of Russian 'Democrats&nbsp; 英国（New York and Oxford: Oxford
+                                        University Press）, 2000.The Bear Watches the Dragon: Russia’s Perceptions of
+                                        China and the Evolution of Russian- Chinese Relations since the Eighteenth
+                                        Century&nbsp;&nbsp; 美国（Armonk, NY: M.E.Sharpe）, 2003.Russia on the Threshold of
+                                        the Centuries. Works on Political Science and Russian Politics. 俄罗斯（Moscow, Ves’
+                                        Mir）, 2016.《俄国熊看中国龙：17-20世纪中国在俄罗斯的形象》， 中国（重庆出版社）, 2007.Rising China and the
+                                        Future of Russia&nbsp; 俄罗斯Moscow: Mezhdunarodnye otnosheniya）, 2015.A Pivot to
+                                        Asia: Russia’s Foreign Policy of the Threshold of the 21st Century and Its
+                                        Activation in Asia&nbsp; 俄罗斯Moscow: Ves’ mir,.,2014. </p>
+                                    <a href="/home/index/article/id/174698/mid/381.html"
+                                       style="float:right;">[阅读全文]</a></p>
+                                </div>
+                            </div>
+
+                            <ul class="list-news pl4">
+                                <li>
+                                    <a href="/home/index/articles/mid/378.html">
+                                        <span>[首席专家]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6067/mid/378.html">
+                                        <span class="right title">12/31</span>首席考古学家王建新</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/378.html">
+                                        <span>[首席专家]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/174696/mid/378.html">
+                                        <span class="right title">08/04</span>首席艺术家岳钰</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/381.html">
+                                        <span>[院内研究人员]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/174698/mid/381.html">
+                                        <span class="right title">08/04</span>特聘外籍专家亚历山大·卢金（ALEXANDER LUKIN）</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/381.html">
+                                        <span>[院内研究人员]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6241/mid/381.html">
+                                        <span class="right title">12/31</span>经济学家郭立宏教授</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/381.html">
+                                        <span>[院内研究人员]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6106/mid/381.html">
+                                        <span class="right title">05/27</span>思想史学家方光华教授</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-col-3-item ml27">
+                        <h2 class="h2">
+                            <a href="/home/index/articles/mid/4316.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路研究</span>
+                        </h2>
+                        <div class="col-intro-text">
+                            <div class="bd clearfix" style="max-height: 161px;">
+                                <img src="/upload/appendix/17/2017-10-17_59e5dc8045d04_cover.jpg?v=1508236418063" alt=""
+                                     class="photo left">
+                                <div class="col-intro-detail clearfix">
+                                    <h2>方光华：丝绸之路遗产及其现代价值</h2>
+                                    <p class="h45" style="display: -webkit-box;
+                             overflow: hidden;
+                             text-overflow: ellipsis;
+                             word-break: break-all;
+                             -webkit-box-orient: vertical;
+                             -webkit-line-clamp: 6;">
+                                        丝绸之路遗产及其现代价值
+
+                                        方光华
+                                        西北大学丝绸之路研究院 陕西西安
+                                        &nbsp;
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        内容提要：丝绸之路是新航路开辟之前人类文明交流最重要的通道，是人类历史上最宝贵的文化遗产之一。它是欧亚大陆不同地区商品贸易和生产技术交流之路，是欧亚大陆不同地区人类精神世界的交流之路，是欧亚大陆不同文明的相互借鉴之路。从丝绸之路的历史来看，它具有三个主要特点：贸易利润容易造成丝路沿线国家的冲突；强大国家的和平相处是丝路畅通的重要保障；宗教文化传播方式对丝绸之路影响巨大。要重新焕发“丝绸之路”的活力，需要维护沿线国家政局的稳定和核心国家良好的政治关系，准确界定丝绸沿线国家在世界贸易体系中的地位，加强丝绸之路沿线国家的宗教与文化对话。
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 关键词：丝绸之路，文化遗产，贸易，宗教，文化
+
+                                        一、丝绸之路文化遗产的主要内涵
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        “丝绸之路”是古代欧亚大陆的长途贸易和文化交流路线的通称。当时在这条交通通道上输出的物品中，最典型的是丝织品。1877年，德国地理学家费迪南·冯·李希霍芬（Ferdinand
+                                        von Richthofen）首次用“丝绸之路”代指这一交通动脉，后被国内外学术界普遍接受。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        “丝绸之路”并不是一条直线，而是有多条路线。主要路线包括：（1）沙漠绿洲之路，为最重要的商道。从长安出发，途经西域、中亚，通往西亚、南亚，西可达地中海沿岸直至罗马。（2）北方草原之路，从长安出发，向北经欧亚草原通往西亚、欧洲，又称“皮毛之路”；（3）南方丝绸之路，是从四川经印度通往中亚的道路。唐代从长安出发，经甘肃、青海到达西藏，并可通往印度的“唐蕃古道”；还有从云南和四川经缅甸或西藏通往印度的“茶马古道”，都应该是南方丝绸之路的组成部分。（4）海上丝绸之路，分别通往朝鲜、韩国、日本、东南亚和南亚、西亚、东非。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        欧亚大陆早已存在一些商业和贸易的通道。公元前2000年前后，原产于西亚的小麦传入黄河流域，原产于黄河流域的小米也同时传入新疆和中亚，说明东西方的交流通道已经存在。商代晚期安阳殷墟妇好墓出土的大量用和田玉制作的玉器，表明公元前12世纪“玉石之路”就已存在。成书于战国时期的《穆天子传》，记载了公元前10世纪周穆王携带丝织品西行至“西王母之邦”的故事。公元前6、5世纪波斯帝国对西亚、非洲和欧洲东南部地区的征服、公元前4世纪亚历山大的东征、公元前3世纪前期印度阿育王的扩张，都促进了欧洲、西亚、中亚、南亚之间的区域交往，自帕米尔以西的丝绸之路西段实际上已经开通。考古证明，公元前6至前5世纪欧洲人已得到中国丝绸[①]。公元前5世纪，在西亚存在着一条从小亚到波斯、以贩运制作石器工具所需的黑曜石的“黑曜石之路”，阿拉伯半岛则有一条贯穿南北、以贩运香料为目的的“香料之路”。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元前139年，汉武帝派遣张骞前往大月氏，几经周折，西行至大宛（今费尔干纳盆地）、大月氏（今乌兹别克斯坦南部）、大夏（古代巴克特里亚，今阿富汗北部）等地，公元前126年返回长安。一条东起长安，经陇西、河西走廊，然后沿塔里木盆地南北两缘，进而连接中亚、南亚、西亚和欧洲的中西交通通道正式建立。史书上把他的这次西行誉为丝绸之路的正式开辟。
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 丝绸之路是新航路开辟之前人类文明交流最重要的通道，是人类历史上最宝贵的文化遗产之一。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        首先，它是欧亚大陆不同地区商品贸易和生产技术交流之路。由于不同的气候、土壤、矿产、产业和文化，古代欧亚各国形成了不同的农业和手工业产品，从而出现了交易的需要。例如，中国出口的丝绸、瓷器、茶叶在欧亚地区有巨大的需求，但这些产品有其独特的物种（桑蚕、高岭土、茶树）和生产工艺，国外在很长时期内无法仿制。西汉以后，丝绸开始成为这条贸易之路上的大宗商品；唐朝时，瓷器成为丝路上重要的输出物产；宋元时期，瓷器外销依然很旺盛，同时茶叶也成为重要的输出品。而来自西域的毛织品、玻璃、宝石、香料等也为中国所喜爱。商品贸易的需求及其巨大利润是丝绸之路长盛不衰的根本原因。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        产品的交换带来了生产技术的相互促进。由于巨大的丝绸、瓷器和茶叶需求，西亚和欧洲国家竞相仿制中国的丝绸、瓷器和茶叶以及其他产品。以两河流域为中心，西至叙利亚，东到中亚腹地，本属纺织业发达之地，丝绸和蚕丝传入之后，该地区把丝绸纺织和原来的毛、麻纺织结合起来，创造出许多质地和性能皆称奇特的产品。这些产品原料上以混纺为特色，多加以金、银丝线和毛、麻等，在织造技术上保持了毛纺的特点，花纹图案则基本属于西域传统，其中“波斯锦”是最有代表性和影响力的品种。唐朝时期，中亚的康国(今撒马尔罕一带)发展成世界丝织品生产中心之一和最重要的丝绸集散地。西亚许多地区如报达(今巴格达)、谷尔只(今格鲁吉亚)、毛夕里(今伊拉克北部摩苏尔)、忽鲁模斯(今伊朗东南部，波斯湾沿岸)等，也发展成为重要丝绸产区或集散地。西域丝绸也更多地流入到中国境内来。大食“蕃锦”包括重锦、百花锦、碧黄锦、兜罗锦等是唐中期以后颇为中原所瞩目的西域丝绸。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        此外，还有一些很重要的生产技术也随着丝路的开通而传播，例如造纸技术，唐玄宗天宝十载（751年），唐军和阿拉伯帝国阿拔斯王朝的军队在中亚的怛罗斯（今哈萨克斯坦南部塔拉兹附近地区）发生激烈战斗，唐军失败，1万多人被俘，其中包括杜环在内的诸多造纸工匠。这批唐军俘虏被安置在撒马尔罕新建的的造纸坊里工作，他们把造纸术传授给了当地人。从此，中亚、中东，西亚和欧洲进入纸张时代，大大加速了文明的传播。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        第二，它是欧亚大陆不同地区人类精神世界的交流之路。贸易在满足不同人群、民族和国家对商品的需要的同时，也为他们打开了了解其他民族精神世界的窗口。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        古代波斯帝国的国教是琐罗亚斯德教，中国称祆教、拜火教，它是基督教诞生之前中东和西亚最有影响的宗教，由琐罗亚斯德（前628年～前551年）创立。在亚力山大希腊化时期一度衰落，安息（帕提亚）帝国时期开始复兴，3世纪又被波斯萨珊王朝定为国教。祆教的许多宗教文化观念和习俗传播到了犹太人中间。3世纪，祆教已经传入中国新疆地区。[②]南北朝时期传入中国中原，被称为胡天、胡天神、火神。唐初大量祆教徒进入内地，并正式得名火祆教。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元前6世纪，佛教在印度产生。公元前3世纪，印度阿育王推行佛教。佛教的教徒遍及印度各地，而且迅速传向邻国。公元1世纪，贵霜族建立了贵霜王朝，迦腻色伽即位后，也推行佛教，由于贵霜帝国的影响，佛教很快成为新疆南部的主流宗教。同一时期，
+                                        中原地区已经有佛教信仰流行。公元3世纪以后，相继出现了朱士行、法显、玄奘等西行求法高僧，以及鸠摩罗什等来华西域高僧。随着对佛教的了解的深入，中国佛教徒已经能够准确把握佛教义理的精髓。大约在6世纪中叶，中国佛教已经不满足于追求什么才是原汁原味的佛教，开始出现用自己的理解去构架佛学体系的尝试。隋唐时期是中国佛教创宗立派的重要时期。如吉藏依据《中论》、《百论》、《十二门论》创立三论宗，智顗依据《妙法莲花经》和《大般涅槃经》创立天台宗，玄奘偏重《解深密经》和《瑜伽师地论》创立法相唯识宗，法藏依据《华严经》创立的华严宗等等。这些宗派共有的特征是，依据自己的理解，建立持之有据、言之成理、反映佛教根本精神、各有特色的佛教理论体系。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元1世纪上半叶，基督教产生于罗马帝国统治下的巴勒斯坦、小亚细亚一带。基督教在最初兴起的过程中，并没有一个统一的体系和中心。经过2—4世纪对异端的斗争后，以罗马教会及主教为主要代表的大公教会初步确立，但居住在东方的基督徒强调自己的独立性。东方的基督徒中有一分支聂斯托里派，虽然也不为东罗马教廷所认可，但它在叙利亚、波斯获得认同。聂斯托里派通过丝绸之路而向东传播。6世纪时，在今乌兹别克斯坦中部的撒马尔罕有该派的主教。聂斯托里派在635年传到长安，被称作“景教”，意为“光明炽盛之教”。781年，景教传入长安150年之后，当地的基督教团体还竖立了一块石碑《大秦景教流行中国碑》。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元3世纪中叶，西亚的美索不达米亚地区形成了一种流传相当普遍的宗教摩尼教。摩尼的父母是安息人，但他加入了一个犹太基督教的派别。他20多岁时来到印度，在那里接受了更多的不同宗教影响。他建立的教义相信通过一种神秘的知识体悟就可以获得救赎或解脱，宣布善恶二者永远不断地对立与抗争着。虽然饱受罗马帝国和萨珊帝国的迫害，摩尼教仍然在从西亚到中亚的广大地区流传开来。撒马尔罕是摩尼教的一个重镇。摩尼教也传到了中国。在唐代，摩尼教得到武则天的接纳，开元十九年（731年），摩尼教传播达到鼎盛。玄宗开元20年（732年）虽然禁断摩尼教，但代宗宝应元年（762年），当唐朝邀请一批回纥军队到内地平定叛乱时，这批回纥人归信了摩尼教。到840年，摩尼教发展成为了回纥的国教，983年，高昌回纥改宗佛教。高昌故城的遗址发掘有大量的摩尼教经典写本。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        从610年穆罕默德创教开始，到他逝世之时的23年间，伊斯兰教终于发展成为整个阿拉伯半岛的统一宗教。公元711年，阿拉伯人已经征服了中亚大草原的东南部。10世纪初，伊斯兰教经中亚传入新疆喀什地区。14世纪中叶，随着察合台汗国统治者秃黑鲁帖木儿汗接受伊斯兰教并强制推行伊斯兰教，一部分蒙古人改信伊斯兰教，并逐渐与当地的突厥人、回纥人的后代融合，伊斯兰教迅速地东传至哈密、吐鲁番一带。至15世纪末16世纪初，伊斯兰教已遍及天山南北，成为新疆地区占统治地位的宗教。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        在西方宗教文化向东方传播的同时，诞生于中国本土的道教也随着人员流动而在西域地区传播。汉唐时期的西域考古发现有很多道教遗迹，如书法、绘画、织物及墓葬艺术等。迟至蒙元时期，长春真人丘处机在赴中亚拜见成吉思汗时，还在西域见到信奉道教的民众。
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 第三，它是欧亚大陆不同文明的相互借鉴之路。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        丝绸之路把华夏文明、印度文明、中亚文明、波斯—阿拉伯文明、希腊—罗马文明、非洲文明以及亚欧草原带的游牧文明连接起来，促进了东西方文明的交往以及人类文明的共同进步。[③]
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        早在爱琴文明时期，希腊地区的居民就与相邻的埃及、小亚、西亚等地区的古老文明有了接触。公元前6世纪中期，波斯帝国崛起于伊朗高原，并很快向东西两面扩张。版图西起埃及，北到黑海、里海一线，南到阿拉伯半岛，东到印度西北部。小亚沿岸的希腊殖民城邦沦陷，希腊本土一度面临生死存亡的考验。公元前334年，亚历山大以希腊和马其顿联军统帅的身份开始了对波斯帝国的征服。十年征战，亚历山大统治了从地中海到印度河，从黑海、里海、咸海到阿拉伯海、波斯湾、红海的辽阔领域。虽然帝国在公元前323年亚历山大突然病逝后迅即崩溃，但西方与东方文化开始真正深入的交流，西亚和北非的埃及保留了亚历山大的将领分别建立的塞琉古帝国和托勒密帝国等希腊化国家。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元1、2世纪，罗马、安息、贵霜和汉朝等四大帝国自西向东并列存在，国势昌盛。罗马帝国在图拉真统治期间(98—117年在位)疆域最辽阔，把版图扩大到幼发拉底河上游一带。安息帝国（即帕提亚帝国）进入“反希腊化”时期，回归波斯文化，体现出融合希腊文化和土著文化的特点。贵霜帝国在迦腻色伽在位期间（约公元78—101年或102年），国势鼎盛，称霸中亚和南亚。汉朝则成功抗击匈奴，控制河西走廊，进驻天山南路。丝绸之路将四大帝国直接联系起来。安息从中国进口牲畜、金银、宝石、地毯、夏布、丝绸、铁、桃子、杏等商品，向中国输出的商品有葡萄酒、石榴、驼鸟等。另外，安息控制下的伊拉克也有海路直通印度河，与中亚、高加索等地区存在密切的贸易和文化交流。[④]
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        魏晋南北朝时期，中国虽然处于分裂状态，但西域以及河西走廊、青海地区相对平稳，而丝绸之路另一枢纽地带的波斯地区，由于波斯萨珊王朝(226～651年)的建立，成为了丝绸之路上重要的中转站和集散地，对丝绸之路的发展起到了重要的推动作用。隋唐时期，丝绸之路的发展达到顶峰，唐朝、中亚诸国、波斯萨珊王朝及雄踞于地中海东岸的拜占庭帝国，构成了丝绸之路上的重要贸易伙伴，使丝绸之路上的交往更加频繁。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        丝绸之路贸易推动了中心国家和城市的繁荣。例如，罗马帝国对从东方进口的货物征收高达25%的进口税，由此获得大量财富。在5世纪西罗马帝国崩溃后，罗马东部地区的经济因丝路贸易等原因而持续繁荣，建国于此的东罗马帝国（拜占庭帝国）继续生存了近千年，直到15世纪为奥斯曼帝国征服为止。同时，丝路沿线的内地城市处于开放的最前沿并由此变得富裕，如长安、大马士革、大不里士、伊斯法罕、罗马等。随着丝路贸易从陆地转向海洋，一批沿海港口城市和近海城市开始日渐繁荣，如中国的广州、泉州，波斯的西拉夫，伊拉克的巴士拉，埃及的开罗，东罗马帝国的首都君士坦丁堡（今土耳其的伊斯坦布尔）。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        欧亚内陆草原的游牧民族也被丝绸之路贸易带入了世界文明进步的潮流之中。如散居在欧亚大陆中部的草原、半沙漠和山前地带的“塞人”（希腊史籍中则称之为“斯基泰人”，波斯史籍则称之为“塞克”），在公元前3世纪以前被融入丝绸之路的文明交往历史。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        在欧亚大陆北部，东起辽东，西抵里海，北达西伯利亚，南至长城、延袤数千里广大荒漠草原之区域，历来为游牧民族驰骋之地。公元前3世纪后半叶，匈奴崛起于中国北部，统一漠北。匈奴强盛的时侯，东破东胡，南并河套之地，西击月氏与西域各国，北服丁零与坚昆。其地域以蒙古高原为中心，东至内蒙古东部一带，南沿长城与秦汉相邻，向西深入中亚东部，北达贝加尔湖周边。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元前2世纪，居住在祁连、敦煌间（今东天山及周边地区）的游牧民族大月氏人，先后为匈奴和乌孙所迫，向西迁徙，进入中亚两河流域，并臣服了大夏。其后在大夏的基础上建立的贵霜帝国，处在东西方的丝路商道上，其文化受到东西方文化的双重影响，前期的艺术较多受到希腊风格影响，随着佛教的盛行，又逐渐向佛教艺术风格转变，造就了盛极一时的健驮逻艺术。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        又如突厥，最先可能是生活在阿尔泰山一带，后东迁蒙古高原成为铁勒诸部的一部。552年大败柔然，建立了突厥汗国。最盛时疆域东至辽河上游，西濒咸海，北至贝加尔湖，南临阿姆河。582年分裂为东、西突厥。638、659年，东西突厥先后统一于唐。680年，南迁的东突厥之后北返复国，建立后突厥汗国，745年亡于回纥。大批突厥人迁入中亚和西亚地区，在接受古老伊朗文明和新兴伊斯兰文明影响的同时，也带来了突厥文化的深刻影响。
+                                        10世纪时，居住在蒙古及中国东北地区的契丹人起于东北，统一中国北部以及漠北一带，建立辽国。辽代暮年，契丹人的一支在耶律大石的率领下，经过长途跋涉进入中亚。在征服当地民族后，建立西辽国，定都虎思斡耳朵（今吉尔吉斯斯坦共和国楚河州托克马克境内的布拉纳城），自称古尔汗（又译为古儿汗、菊尔汗），意为世界之王。西辽统治者大力推行汉文化。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        11世纪末叶，蒙古人起于额尔古纳河流域，1204年，成吉思汗完全统一漠北。1211年至1215年，与金人奋战，占领黄河以北。1218年，灭西辽政权。成吉思汗希望与控制丝路贸易的中亚花剌子模王国实行和平贸易，但花剌子模王国国王摩诃末被丝路贸易的巨大利润所蒙蔽，杀害了成吉思汗的贸易商团。1219年秋，成吉思汗发动了对花剌子模的战争，取得第一次西征的胜利。成吉思汗死后，其继承者又继续用兵欧洲，占领俄罗斯大部及里海以北，又进据匈牙利及波兰，此乃第二次西征所得之结果。其后于蒙哥时代，又继续用兵西域，平定波斯全部及小亚细亚一带。此后，包括西域和中国本土在内的欧亚大陆广大区域，皆统于蒙古大汗之下。
+                                        &nbsp;
+                                        二、丝绸之路文化遗产的主要特点
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 第一，贸易利润容易造成丝路沿线国家的冲突。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        丝绸之路开辟以来，亚洲始终处于贸易赢利位置，中国一直处于外贸出超的地位，出口的丝绸、瓷器、茶叶三种大宗产品在欧亚地区需求巨大，尽管后来大宗出口产品已经远非丝绸、茶叶、瓷器这三种，但出超的局面一直维持到19世纪鸦片战争爆发。另外，印度的纺织品等商品也向西方大量出口。而罗马每年大约要花费1500万便士来购买阿拉伯香料。[⑤]如果加上日本和其他地区生产的白银，近代早期全球白银有一半最终到达亚洲，尤其是中国和印度。[⑥]
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        利润不平衡容易导致丝路沿线国家之间的矛盾。为从丝路贸易中获取最大利益，丝路沿线国家垄断贸易，不断上推丝绸价格，造成冲突局面。如东汉时期，中国与东罗马帝国进行陆路丝绸贸易，中间隔着贵霜帝国和安息帝国。安息帝国控制着丝绸贸易的通道，阻挠中国与罗马帝国的直接贸易。公元97年，班超派遣甘英出使大秦（即罗马帝国），试图打通中国与罗马帝国的直接贸易。甘英行至条支国（今叙利亚），欲渡海而至罗马。安息人谎言海水广大，顺风则三月可达，逆风更需二岁，此外，海中还有妖怪歌唱，使人思慕而导致死亡。甘英听后遂望而却步，折返回国。安息国的垄断促使罗马去探求新路通达中国。东汉桓帝延熹九年（166年），大秦王安敦遣使自日南徼外献象牙、犀角、玳瑁。中国与罗马帝国开始建立了直接的联系。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        公元前１世纪中叶到公元3世纪，罗马为畅通陆路丝绸贸易，与安息帝国（即帕提亚帝国）开始了频繁的战争。帕提亚灭亡之后，取代帕提亚的是萨珊帝国（新波斯帝国）。东罗马帝国（拜占庭帝国）国王查士丁曾与阿克苏姆国王阿慈贝哈谈判，希望重开海路，但因阿克苏姆人与波斯人达成利益共识，致使双方谈判破裂。200年间，东罗马帝国与萨珊帝国９度开战，在5世纪中叶，东罗马帝国和萨珊王朝达成和平协议，恢复陆上丝路。虽然如此，波斯依然控制着丝路。6世纪，突厥人和粟特人曾遣使前往波斯谋求通商，但被波斯国王拒绝。东罗马帝国曾经极力与控制欧亚草原丝路的突厥人建立联盟。公元626—628年，东罗马帝国对萨珊波斯开战，西突厥曾予以援手。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        在中国北方和西部边境，唐朝与突厥、吐蕃围绕着丝绸之路（包括西域诸小国）的控制权也发生过激烈的冲突。629—630年，唐军大败东突厥，太宗在其地设羁縻州，随后从四方君长那里接受了“天可汗”称号。634年，西突厥一分为二，唐军乘机降伏天山南路诸国，设安西都护府，统有四镇。657年，唐亡西突厥。659和661年，中亚河中的昭武九姓和波斯以东的16国分别内附，咸海以东的河中（今乌兹别克斯坦和塔吉克斯坦西部）、吐火罗（今阿富汗北部至巴基斯坦西北部）等地因而成为唐朝的羁縻州。702年，唐设北庭都护府，统辖天山北路之地。唐朝在西域的大敌是吐蕃，后者于663年占有吐谷浑故地，670年一度攻占安西，并与唐朝战事不断；吐蕃的盟友南诏于750-779年间也与唐朝发生战争。717年，大食、吐蕃和突騎施联军首次进攻安西四镇。安史之乱后，吐蕃乘机占领了唐朝的西域、陇右和河西之地，823年唐朝与吐蕃会盟，并于849-857年收复了部分领土。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        罗马帝国和萨珊波斯王朝灭亡后，代之而起的是阿拉伯帝国，中文史籍中称之为大食。阿拉伯人征服的步伐不久迫近中亚，中亚诸国希望中国唐朝能出兵施以援手。起先唐朝虑其路途遥远，大食尚未危及唐朝控制的安西、北庭等地，就没有出兵。后随着大食势力在中亚各地的逐渐壮大，在751年与唐朝军队在怛逻斯城展开大战，唐军大败。此后，安史之乱的爆发，唐朝几无力西顾，逐渐丧失了对中亚的控制。此后很长一段时间，欧亚大陆广阔区域为阿拉伯帝国及后来崛起的奥斯曼帝国所控制。1453年拜占庭帝国被奥斯曼帝国灭亡，君士坦丁堡遂改称伊斯坦布尔。欧洲人视其为发展与亚洲贸易的障碍，11—13世纪的十字军东侵和15—17世纪的新航路的开辟就是在这种背景下发生的。
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 第二，强大国家的和平相处是丝路畅通的重要保障。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        历史上丝路有两个时代最为畅通，就是唐朝和元朝。唐朝设立安西都护府和北庭都护府后，东亚的唐帝国和西亚的阿拉伯帝国两大帝国拥有相对稳定的权力，而且都从丝路中获得巨大利润，这种利益促使两大帝国都有动机去确保丝路的安全。虽然两国间曾爆发怛罗斯之战，之后中亚地区为阿拉伯帝国所控制，但此战结束后两国再未发生大的战事，相反却建立了良好关系。[⑦]直到晚唐，吐蕃控制了河西走廊，从而阻断了丝路。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        蒙元时期，在东滨阿姆河，西临地中海，北界里海、黑海、高加索，南至波斯湾的地区建立伊儿汗国，在东起额尔齐斯河，西至多瑙河，南起高加索山的地区建立钦察汗国，在额尔齐斯河上游和巴尔喀什湖以东地区建立窝阔台汗国,在天山南北路及今阿姆河、锡尔河之间的地区建立察合台汗国，以及在中国本土建立的元王朝，整个欧亚大陆都变成了蒙古人的天下，丝路贸易最为畅通。
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 第三， 宗教文化传播方式对丝绸之路影响巨大。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        丝绸之路又称“宗教之路”、“信仰之路”。佛教、祆教、基督教、伊斯兰教和摩尼教等，都沿丝绸之路传播。在阿拉伯人占据中亚、推行伊斯兰化以前，中亚处于多种文明交汇的枢纽之地，很少有帝国把向外传播宗教作为畅通丝绸之路的重要使命。对于各种宗教的来来往往，各政权基本上都显示出一种顺其自然的平和心态。例如最后一个前伊斯兰时期的波斯萨珊王朝时期，祅教得以恢复，但与祅教一起共存的宗教还有犹太教、基督教和佛教，人们在大部分时期里都可以自由进行宗教活动及宣扬他们的宗教。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        在这种相对自由的氛围下，中亚实际上成为多种宗教的混合区域。佛教主要由印度、经过中亚和新疆逐渐深入到中原。传入中原的佛教，主体已经不是纯粹的印度佛教，而具有中亚和西域特征。佛教教义主要是四圣谛、八正道，主张通过修行得到觉悟，但传入中国的佛教，主要在救赎度人，这可能是受到中亚祆教和摩尼教的影响。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        阿拉伯阿拔斯王朝的初期，伊斯兰化的过程还未完成，境内的基督教徒、祆教徒和犹太人被称为“迪米”（有经人），他们可以自由信教并享有司法自治，只是必须交纳人头税及遵守有关骑马、服饰方面的规定。8世纪以后，穆斯林提出世界划分为两个对立的领域，即“伊斯兰地区”（Dar
+                                        el Islam）和“战争地区”（Dar el
+                                        Harb）。而“伊斯兰地区”在合法性或主权方面与“战争地区”是不对等的，应当将后者从某种“自然属性”转变为真主的领土。[⑧]
+                                        所以哈里发的任务之一就是通过征服扩大“伊斯兰地区”的版图，原先为多元宗教区的中亚最终成为阿拉伯—伊斯兰文明区的一部分。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        在阿拉伯帝国崛起过程中，伊斯兰教大力扩张，使得中亚境内的其他宗教的生存空间遭到挤压，它们只好向东发展。例如景教虽然5世纪时已经在东罗马产生，但直到635年才传到长安，而此时伊斯兰教已经在阿拉伯半岛兴起，有学者认为，景教徒入华，可能与波斯对阿拉伯的抵抗有关，[⑨]来华的阿罗本从波斯出发，与设在波斯的本部教会有密切关系。651年，阿拉伯帝国彻底灭亡波斯萨珊王朝后，波斯王之子俾路斯、孙泥涅师流亡中国，试图依靠唐王朝开展复国行动。直到745年，唐玄宗才颁布诏书，将景教波斯寺改为大秦寺。[⑩]祆教在南北朝时期可能已传入中国，但真正大规模传入，应是在波斯萨珊王朝灭亡后。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        当阿拉伯帝国崛起后，陆上丝绸之路贸易受阻，海上贸易就成为重要的补充。海上贸易在中国的宋朝成为主导方式。虽然蒙元时期，陆路贸易有所恢复，但随着造船技术和航海技术的不断进步，从明代开始，陆上丝绸之路最终走向衰落。随着新航路的开辟，欧洲的葡萄牙绕道非洲的好望角，开辟了东西方贸易的新路线。海上贸易的兴起带来亚非拉国家经济格局的重大变化，沿海地区取代丝路沿线的内陆逐渐成为经济发达地区。在中国，曾经交通发达、经济繁荣的西北地区沦落成为交通闭塞、经济落后的偏远之地。西亚的伊拉克成为奥斯曼帝国官员最不愿意任职的偏远省份。
+                                        &nbsp;
+                                        三、重新焕发“丝绸之路”的活力
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        100多年前，英国地缘政治专家麦金利曾预言，欧亚大陆的腹地是全球战略竞争的决胜点。但二次世界大战后，在冷战的国际大环境下，斯大林提出两个平行的世界市场理论，从而使社会主义阵营的经济脱离了世界市场，包括相邻的中东、南亚地区。此后，中苏交恶，中国也无法与包括中亚在内的苏联发展密切的经济联系。丝绸之路跌落至冰点。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        随着冷战结束、中亚五国独立和此后全球化的发展，上世纪90年代以来，重建欧亚大陆桥，重新焕发“丝绸之路”的活力的呼声不断高涨。1997
+                                        年，联合国教科文组织等认为，丝绸之路应该恢复其古代的角色作用，成为东西方之路文化贸易往来的主要血管和通道。日本桥本内阁同年提出“丝绸之路外交”设想，2004年起，日本推动设立“中亚⑤＋日本”机制，通过五国外长的定期会晤来促进政治对话、经贸合作、文化交流。1999年，美国国会通过“丝绸之路战略法案”，计划通过支持中亚和南高加索国家的经济和政治独立，推动中亚国家建立市场经济和民主政治体制，使这些国家与欧亚大陆相连通。2005年美国又提出“大中亚”计划，强调以阿富汗为立足点，在中亚地区建立政治、经济与安全的多边机制，以促进地区发展与民主改造。2011年美国国务卿希拉里提出了“新丝绸之路战略”，力图在美国主导下，依托阿富汗连接中亚和南亚的区位优势，形成以阿富汗为中心的“中亚—阿富汗—南亚”交通运输与经济合作网络，促进这一区域的能源南下和商品北上。此后，美国将其中亚、南亚政策统一命名为“新丝绸之路战略”。俄罗斯视前苏联的中亚地区为其势力范围，竭力营造独联体国家内自由贸易组织“欧亚经济共同体”。俄罗斯与白俄罗斯、哈萨克斯坦、吉尔吉斯斯坦和塔吉克斯坦在原五国关税同盟的基础上，成立了欧亚经济共同体。2001年6月15日，中国、俄罗斯、哈萨克斯坦、乌兹别克斯坦、吉尔吉斯斯坦、塔吉克斯坦在“上海五国”机制的基础上成立了上海合作组织，致力于加强成员国之间的全方位合作。在此之后，印度、伊朗、巴基斯坦、阿富汗、蒙古5国成为上海合作组织的观察员国，土耳其、斯里兰卡和白俄罗斯3国成为对话伙伴国。2013年9月，习近平先生在中亚访问时提出建设新丝绸之路经济带构想，希望通过加强政策沟通、道路联通、贸易畅通、货币流通、民心相通，共同建设“丝绸之路经济带”。丝绸之路已经成为世界各国共同关注的焦点。
+                                        &nbsp; &nbsp; &nbsp; &nbsp; 回顾丝绸之路的历史，我们可以得出，要重新焕发“丝绸之路”的活力，需要关注以下方面：
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        第一，维护沿线国家政局的稳定和核心国家良好的政治关系。“丝绸之路”在地域上包括了东亚、中亚、南亚、西亚和欧洲、非洲。只有相关国家在更高的战略层面进行沟通，争取达成共识，其他问题才能迎刃而解。俄罗斯和中亚国家在“丝绸之路”重建中具有特别重要的地位。要畅通“丝绸之路”，必须获得俄罗斯的充分理解。此外，为了构建以美国为中心的安全体系，美国已经给予中亚大量经济军事援助，在中亚地区具重要的政治军事影响。同时，中亚国家独立后，受西方式民主政治模式影响，先后发生过塔吉克斯坦内战（1992—1997年）、吉尔吉斯斯坦的“郁金香革命”（2005年）和乌兹别克斯坦的安集延骚乱（2005年）等严重事件，丝绸之路沿线国家政局的稳定还面临比较复杂的形势。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        第二，准确界定丝绸沿线国家在世界贸易体系中的地位。从广义范畴来看，丝绸之路经济带东边始于经济繁荣的东亚经济圈，西边直达经济发达的欧盟经济圈，中间是以中亚为中心的泛中亚经济圈（见图一），
+
+
+                                        &nbsp;
+                                        经济发展水平相对较低，形成了一个经济凹陷区域。[11]但中亚地区具有广阔的经济发展潜力。中亚地区石油、天然气和矿产资源丰富，乌兹别克斯坦等国家农业发展条件优越，对外资的吸引力日益增强。需要从促进泛中亚经济圈的经济发展，形成世界新兴增长区域，有助于带动欧亚大陆的经济增长等角度，界定丝绸沿线国家在世界经济贸易体系中的地位。
+                                        &nbsp; &nbsp; &nbsp; &nbsp;
+                                        第三，加强丝绸之路沿线国家的宗教与文化对话。中亚国家民族问题和宗教问题十分复杂，塔吉克人在族源上为东伊朗族，与伊朗文化语言习俗相同，共同继承波斯文明。哈萨克斯坦、吉尔吉斯斯坦、乌兹别克斯坦、土库曼斯坦则均为阿尔泰语系突厥语族国家，与土耳其语言、文化较为接近。伊朗积极发展、援助与同族塔吉克斯坦的政治、经济、文化关系，积极拓展与土库曼斯坦的双边关系。土耳其以泛突厥主义为口号，号召复兴突厥民族，建立大突厥经济圈，建立由土耳其主导的突厥国家联盟。同时，中亚地区各国居民主要信仰伊斯兰教，容易受到极端宗教势力的渗透。70年代末以来，中亚伊斯兰激进主义逐渐抬头，出现一些极端组织，如乌兹别克斯坦的“乌兹别克斯坦伊斯兰运动”（乌伊运）和塔吉克斯坦的“伊斯兰复兴党”，一些国际伊斯兰组织如伊扎布特（伊斯兰解放党）、基地组织也进入中亚。它们不断制造恐怖事件，挑起民族冲突，破坏社会稳定，并与阿富汗、南亚、高加索的伊斯兰组织遥相呼应，支持中国的“疆独”活动。因此，反对恐怖主义和极端宗教势力是丝绸之路沿线国家共同的战略需求。今天，尤其要加强宗教与文化对话。
+
+
+                                        [①] 黄新亚:《丝路文化·沙漠卷》第一章,浙江人民出版社,1995年。
+                                        [②] 林梅村：《从考古发现看火祆教在中国的初传》，《西域研究》1996年1期，第54-58页。
+                                        [③]
+                                        西北大学中东史研究专家彭树智教授说，“丝绸之路的开拓和后来的地理大发现即新航路的开拓一样，都是世界性的两大文明交往之路，都是人类文明史发展的阶段性的标志。”
+                                        参见彭树智：《文明交往论》，陕西人民出版社2002年版，第524页。
+                                        [④] 黄民兴：《中东国家通史·伊拉克卷》，商务印书馆2002年版，第58页。
+                                        [⑤] [美]威廉·伯恩斯坦：《茶叶·石油·WTO：贸易改变世界》，李晖译，海口：海南出版社，2010. 第68页。
+                                        [⑥] [德]贡德·弗兰克：《白银资本：重视经济全球化中的东方》，刘北成译，北京：中央编译出版社，2008。
+                                        [⑦]&nbsp; 黄民兴：《“伊斯兰秩序”与“华夷秩序”——唐朝中国与阿拔斯王朝的地区秩序关系分析》，《唐都学刊》，2008年第3期。
+                                        [⑧] Majid Khadduri, The Islamic Law of Nations, Baltimore: The John Hopkins
+                                        Press, 1966, p.13.&nbsp; 转引自Amr G.E. Sabet, “The Islamic Paradigm of Nations:
+                                        toward a Neo-Classical Approach”,
+                                        http://www.gmu.edu/academic/pcs/Sab82PCS.html.
+                                        [⑨] &nbsp;朱谦之：《中国景教》，东方出版社1993年，第63-64页。
+                                        [⑩]
+                                        “波斯经教，出自大秦，传习而来，久行中国，爰初建寺，因以为名，将欲示人，必修其本，其两京波斯寺，宜改为大秦寺。天下诸府郡置者，亦准此”。《唐会要》卷49《大秦寺》，第102页。《册府元龟》卷51《帝王部》崇释氏，第575页。
+                                        [11]白永秀,王颂吉: 《丝绸之路经济带的纵深背景与地缘战略》, 《改革》2014年3期。
+
+
+                                        丝绸之路遗产及其现代价值（西北大学丝绸之路研究院方光华） </p>
+                                    <a href="/home/index/article/id/6121/mid/4319.html"
+                                       style="float:right;">[阅读全文]</a></p>
+                                </div>
+                            </div>
+
+                            <ul class="list-news pl4">
+                                <li>
+                                    <a href="/home/index/articles/mid/4319.html">
+                                        <span>[丝绸之路经济带]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6121/mid/4319.html">
+                                        <span class="right title">06/27</span>方光华：丝绸之路遗产及其现代价值</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/4319.html">
+                                        <span>[丝绸之路经济带]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/190708/mid/4319.html">
+                                        <span class="right title">05/18</span>“一带一路”海外工程项目巡礼</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/4319.html">
+                                        <span>[丝绸之路经济带]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6063/mid/4319.html">
+                                        <span class="right title">12/29</span>从“交通走廊”转向“经济带”</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/4319.html">
+                                        <span>[丝绸之路经济带]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6142/mid/4319.html">
+                                        <span class="right title">07/07</span>2014年度国家社科基金重大项目（第一批）丝绸之路相关项目</a>
+                                </li>
+
+                                <li>
+                                    <a href="/home/index/articles/mid/4319.html">
+                                        <span>[丝绸之路经济带]</span>
+                                    </a>
+                                    <a href="/home/index/article/id/6084/mid/4319.html">
+                                        <span class="right title">05/27</span>卢山冰：“航空城实验区”将成为助力经济发展的“稀缺资源”</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-bar right">
+                <div class="slider-col-1 clearfix">
+                    <div class="search">
+                        <form method="get" action="/home/index/search.html">
+                            <input class="search-text" type="text" name="sw"/>
+                            <button class="slider-btn2 b1">搜索</button>
+                        </form>
+                        <!--<form action="#" method="post">-->
+                        <!--<input type="text" name="keywords" id="" class="search-text">-->
+                        <!--<button type="submit" class="slider-btn2 b1">搜索</button>-->
+                        <!--</form>-->
+                    </div>
+                    <a href="javascript:AddFavorite();" class="slider-btn b1">加入收藏</a>
+                    <a href="#" class="slider-btn b2">联系我们</a>
+                    <div class="clearfix"></div>
+                    <h3 class="font-YH h3"><span>首席专家</span></h3>
+                    <div class="main-col-item">
+                        <a href="/home/index/article/id/6067/mid/378.html" class="kt-img-3">
+                            <img src="/upload/cover/17/2016-12-31_58672fe5101f8.jpg" style="width:200px;height: 300px"
+                                 alt="">
+                        </a>
+                        <h4 class="p-name">首席考古学家王建新</h4>
+                        <!--<p class="p-title">西北大学经济管理学院教授</p>-->
+                    </div>
+
+                </div>
+                <div class="slider-col-2 clearfix">
+                    <h2 class="h2-2">
+                        <span class="font-YH">课题研究</span>
+                    </h2>
+                    <div class="main-col-item p15">
+                        <div class="main-col-item">
+                            <a href="/home/index/article/id/174696/mid/369.html" class="kt-img-2">
+                                <img src="/upload/appendix/17/2017-08-04_59840c069845e_cover.jpg?v=1501826151211?v=1501826223468?v=1508218857475?v=1508236050007"
+                                     style="width:200px;height: 170px" alt="">
+                                <div class="title">首席艺术家岳钰</div>
+                            </a>
+                            <p>首席艺术家岳钰 </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岳钰，1953年生，陕西西安人，号癫痴坊主。著名画家，西北大学艺术学院教授、硕士生导师，香港国际影视学院教授，AsmaraAca...
+                            </p>
+                            <!--<p>承担单位：西北大学文化遗产学院</p>
+                            <p>项目负责人：王建新</p>-->
+                            <p class="text-center mt10"><a href="/home/index/articles/mid/369.html" class="view-more">查看更多》</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="fd-content">
+            <div class="content clearfix">
+                <h3 class="font-YH">
+
+                    <span>友情链接：</span></h3>
+                <ul class="fd-text">
+                    <a href="http://www.silk-road.com/toc/index.html" target="_blank">丝绸之路基金会</a>
+                    | <a href="http://idp.nlc.gov.cn/" target="_blank">国际敦煌项目：丝绸之路在线</a>
+                    | <a href="http://www.slwhw.cn/" target="_blank">丝路文化网</a>
+                    | <a href="http://silkroad.fudan.edu.cn/" target="_blank">丝绸之路地理信息系统</a>
+                    | <a href="http://www.zggds.pku.edu.cn/" target="_blank">北京大学中国古代史研究中心</a>
+                    | <a href="http://yugong.fudan.edu.cn/index.php" target="_blank">复旦大学历史地理研究中心</a>
+                    | <a href="http://heshan.snnu.edu.cn/index.aspx" target="_blank">陕西师范大学西北历史环境与经济社会发展研究院</a>
+                    | <a href="http://iwr.cass.cn/" target="_blank">中国宗教学术网</a>
+                    | <a href="http://www.iahs.fudan.edu.cn/cn/index.asp" target="_blank">复旦大学文史研究院</a>
+                    | <a href="http://dhxyjs.lzu.edu.cn/" target="_blank">兰州大学敦煌学研究所</a>
+                    | <a href="http://www.sinoss.net/" target="_blank">中国高校人文社会科学信息网</a>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content text-center">
+                <p>西北大学丝绸之路研究院版权所有 | <a href="http://kuku.web.nwu.edu.cn">登录</a>
+                </p>
+                <p> 地址：西安市太白北路229号 邮编：710069 email：isrs@nwu.edu.cn</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.main-nav ul li').hover(function () {
+                $('.sub-nav').addClass('hidden')
+                $(this).find('.sub-nav').removeClass('hidden')
+            });
+        });
+    </script>
+
+    <script>
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "share": {}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+</body>
+
+</html>

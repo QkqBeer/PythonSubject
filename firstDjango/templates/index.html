@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<ul>
+{% for k,v in  USER_DIR.items %}
+ <li> <a target="_blank" href="/cmdb/detail-{{k}}.html">{{ v.username }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>

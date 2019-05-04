@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+{% load xxoo %}
+{% block content %}
+    <div style="height: 48px;width: 100%;background-color: #dddddd">
+    </div>
+    <h1>使用模板 monster.html</h1>
+    <h1>{% qkq 1 3 %} 使用templatetags中的xxoo.py下的qkq函数</h1>
+     <ul>
+    {% for item in data %}
+     <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+    <div class="page_list"> {{ page_str|safe }}</div>
+{% endblock %}

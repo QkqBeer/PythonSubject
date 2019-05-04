@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XGUIML>
+    <UIelem id="u1">
+        <Gesture>
+            <semantic>
+                <name>leftSlide</name>
+                <calmethod>reduceOneYear()</calmethod>
+                <nextaction>null</nextaction>
+            </semantic>
+        </Gesture>
+        <Gesture name="Touch">
+            <semantic>
+                <name>rightSlide</name>
+                <calmethod>addOneYear()</calmethod>
+                <nextaction>null</nextaction>
+            </semantic>
+        </Gesture>
+    </UIelem>
+</XGUIML>

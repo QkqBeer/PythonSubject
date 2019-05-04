@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div>
+    <input id="1" type="button" value="全选">
+    <input id="2" type="button" value="取消">
+    <input id="3" type="button" value="反选">
+</div>
+<table border="1">
+    <thead>
+    <tr>
+        <td>选项</td>
+        <td>ip</td>
+        <td>port</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td>1.1.1.1</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td>1.1.1.1</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td>1.1.1.1</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td>1.1.1.1</td>
+        <td>80</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="jquery.js">
+
+</script>
+<script>
+    $('#1')[0].onclick = function () {
+        $('[type="checkbox"]').prop('checked', true)
+    }
+    $('#2')[0].onclick = function () {
+        $('[type="checkbox"]').prop('checked', false)
+    }
+    $('#3')[0].onclick = function () {  //转换成dom对象
+        $('[type="checkbox"]').each(function () {
+                var v = $(this).prop('checked') ? false : true;//
+                $(this).prop('checked', v)
+            }
+        )
+    }
+</script>
+</body>
+</html>

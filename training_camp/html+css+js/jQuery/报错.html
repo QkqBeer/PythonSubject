@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报错Error</title>
+</head>
+<body>
+<form id="f1" action="点赞.html" method="post">
+    <div><input type="text"/></div>
+    <div><input type="password"/></div>
+    <div><input type="text"/></div>
+    <div><input type="submit" value="提交"/></div>
+</form>
+
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(':submit').click(function () {
+        $('#f1').find('.error').remove()
+        var flag = true;
+        $('#f1').find('input[type="text"],input[type="password"]').each(function () {
+//         find很关键，find的查找他的子子孙孙，所以根据属性可以直接查找。
+            var v = $(this).val();
+            if (v.length <= 0) {
+                flag = false;
+                var tag = document.createElement('span');
+                tag.innerHTML= "必填";
+                tag.className = 'error'
+                $(this).after(tag);
+            }
+        })
+        return flag;
+    })
+</script>
+
+</html>

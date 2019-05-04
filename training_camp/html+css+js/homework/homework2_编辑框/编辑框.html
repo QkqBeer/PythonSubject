@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑</title>
+
+</head>
+<body>
+<div>
+    <input id="1" type="button" value="全选">
+    <input id="2" type="button" value="取消">
+    <input id="3" type="button" value="反选">
+    <input id="4" type="button" value="编辑模式">
+</div>
+<table border="1">
+    <thead>
+    <tr style="text-align: center">
+        <td>选项</td>
+        <td>ip</td>
+        <td>port</td>
+        <td>状态</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td class="c">1.1.1.1</td>
+        <td class="c">80</td>
+        <td class="d">在线</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td class="c">1.1.1.1</td>
+        <td class="c">80</td>
+        <td class="d">在线</td>
+
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td class="c">1.1.1.1</td>
+        <td class="c">80</td>
+        <td class="d">在线</td>
+
+    </tr>
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td class="c">1.1.1.1</td>
+        <td class="c">80</td>
+        <td class="d">在线</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="F:\PythonSubject\training_camp\html+css+js\jQuery\jquery.js">
+
+</script>
+<script>
+    $('#1')[0].onclick = function () {
+        $('[type="checkbox"]').prop('checked', true)
+    }
+    $('#2')[0].onclick = function () {
+        $('[type="checkbox"]').prop('checked', false)
+    }
+    $('#3')[0].onclick = function () {  //转换成dom对象
+        $('[type="checkbox"]').each(function () {
+                var v = $(this).prop('checked') ? false : true;//
+                $(this).prop('checked', v)
+            }
+        )
+    }
+
+    $('#4').click(function () {
+            if (this.value == '编辑模式') {
+                this.value='退出编辑'
+                $('tbody tr').each(function () {
+                    var ftd = $(this).children()[0]
+                    if ($(ftd).children().prop('checked')) {
+                        $(this).find('.c').each(function () {
+                            var v = $(this).text();
+                            var tag = document.createElement('input')
+                            tag.type = 'text';
+                            tag.value = v;
+                            $(this).empty()
+                            $(this).append(tag)
+                        })
+                        $(this).find('.d').each(function () {
+                            var tag = document.createElement('select')
+                            var op1 = document.createElement('option')
+                            op1.text = '在线'
+                            var op2 = document.createElement('option')
+                            op2.text = '下线'
+                            tag.append(op1)
+                            tag.append(op2)
+                            $(this).empty();
+                            $(this).append(tag);
+                        })
+                    }
+                })
+            }
+            //退出编辑模式
+            else{
+               this.value='编辑模式';
+               $('tbody tr').each(function () {
+                    var ftd = $(this).children()[0]
+                    if ($(ftd).children().prop('checked')) {
+                        $(this).find('.c').each(function () {
+                            var v=$(this).children().val();
+                            $(this).text(v);
+                            $(this).children().remove()
+                        })
+                        $(this).find('.d').each(function () {
+                            var v=$(this).children().val();
+                            $(this).text(v);
+                            $(this).children().remove()
+                        })
+                    }
+                })
+            }
+        }
+    )
+</script>
+</body>
+</html>

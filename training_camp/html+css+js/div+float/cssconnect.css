@@ -1,0 +1,44 @@
+.pg_head{
+    height: 38px;
+    background-color: #dddddd;
+    line-height:38px;
+}
+.pg_search{
+    margin: 0 auto;
+    height:70px;
+    line-height: 70px;
+}
+div{
+    margin: 0 auto;
+}
+input[type='button']{
+   height: 40px;
+    width:100px;
+}
+.biaoti a:hover {
+    color:red;
+    text-decoration:none;
+    }
+.biaoti a:active {
+    color:#000000;
+    text-decoration:none;
+    }
+.dabiaoti a:hover{
+    background-color: red;
+    color: white;
+
+}
+a{
+   font-size: large;
+}
+td{ font-size: large;
+    width:100px;
+    height: 30px;
+}
+td[n='1']{
+    color: blue;
+    overflow: hidden;
+}
+.mokuai div{
+    margin-left: 15px
+}

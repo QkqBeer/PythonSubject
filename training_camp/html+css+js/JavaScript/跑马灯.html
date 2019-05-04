@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="i1">欢迎邱凯强莅临指导！</div>
+<script>
+    function setString() {
+     tag=document.getElementById('i1');
+     tag.innerText=tag.innerText.charAt(tag.innerText.length-1)+tag.innerText.substring(0,tag.innerText.length-1);
+    }
+    setInterval("setString()",500);
+</script>
+</body>
+</html>

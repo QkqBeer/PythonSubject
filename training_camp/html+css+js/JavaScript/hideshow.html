@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 9;
+        }
+        .c2{
+            position: fixed;
+            width: 500px;
+            height: 400px;
+            top:50%;
+            left: 50%;
+            padding-top: -200px;
+            padding-left: -250px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+<div >
+    <input type="button" value="添加" onclick="f()" >
+    <table border="1">
+        <thead>
+        <tr>
+            <th>主机号</th>
+            <th>端口号</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td target="ip">1.1.1.1</td>
+            <td target="port">91</td>
+            <td><a>update</a> |<a>add</a> </td>
+        </tr>
+        <tr>
+            <td target="ip">1.1.1.2</td>
+            <td target="port">92</td>
+            <td><a>update</a> |<a>add</a> </td>
+        </tr>
+        <tr>
+            <td target="ip">1.1.1.3</td>
+            <td target="port">93</td>
+            <td><a>update</a> |<a>add</a> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!--遮罩层-->
+<div class="c1 hide" id="i1">
+</div>
+<!--控制-->
+<div class="c2 hide" id="i2">
+    <input id="ip" type="text">
+    <input id="port" type="text">
+    <input type="button" value="确认" onclick="h()">
+    <input type="button" value="取消">
+</div>
+<script src="F:\PythonSubject\training_camp\html+css+js\jQuery\jquery.js">
+
+</script>
+<script>
+    function f(){
+           document.getElementById('i1').classList.remove('hide');
+           document.getElementById('i2').classList.remove('hide');
+    }
+    function h() {
+         document.getElementById('i1').classList.add('hide');
+         document.getElementById('i2').classList.add('hide');
+    }
+    $('a').click(function () {
+//        $('#i1').removeClass('hide')
+//        $('#i2').removeClass('hide')
+        $("#i1,#i2").removeClass('hide');
+        var tds=$(this).parent().prevAll().each(
+            function () {
+                var n=$(this).attr('target');
+                var text=$(this).text()
+                var tamp="#"+n
+                $(tamp).val(text)
+            }
+        )
+//        var tdList=$(this).parent().prevAll();
+//        $('#ip').val($(tdList[1]).text())
+//        $('#port').val($(tdList[0]).text())
+    })
+</script>
+</body>
+</html>

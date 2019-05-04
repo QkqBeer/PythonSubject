@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    a='alex';
+//    function f() {
+//       var a='tony'
+//        function k() {
+//            console.log(a)
+//        }
+//        return k;
+//    }
+//    var getfunc=f();
+//    getfunc();
+
+//不报错，xxoo提前声明，值为undefined
+//    function c() {
+//        console.log(xxoo);
+//        var xxoo='alex'
+//        console.log(xxoo);
+//    }
+//    c();
+
+
+//按顺序执行，将函数编译
+//j='alex'
+//    function g() {
+//        var j='tom'
+//        function d() {
+//            console.log(j)
+//        }
+//        var j='tony'
+//        return d;
+//    }
+//    res=g()
+//    res()
+
+
+    function t1(age) {
+        console.log(age);
+        var age=27;
+        console.log(age)
+        function age() {
+
+        }
+        console.log(age)
+    }
+    t1(3)
+</script>
+</body>
+</html>

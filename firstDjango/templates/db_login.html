@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<div style="width: 100%">
+    <div id="i1" style="margin-left: 35%;color: cadetblue;font-size: 40px">
+        欢迎登录XX管理系统!
+    </div>
+    <div style="margin-left: 35%;margin-top: 10% ;width: 260px ; height:200px;border: 1px solid rgba(0,0,0,0.82);padding-left: 100px;padding-top: 50px">
+        <form action="db_login" method="post">
+            <p><input name="username" type="text" placeholder="用户名"></p>
+            <p><input name="password" type="text" placeholder="密码"><span style="color: red">{{ error_msg }}</span></p>
+            <p><input type="submit" style="margin-left: 5%" value="提交">
+                <input type="button" id="btn" style="margin-right: 5%" value="取消">
+            </p>
+        </form>
+    </div>
+</div>
+
+<script src="/static/jquery.js">
+
+</script>
+<script>
+    function title() {
+        tag = $('#i1')[0]
+        tag.innerText =tag.innerText.substring(1, tag.innerText.length)+ tag.innerText.charAt(0) ;
+    }
+    setInterval("title()", 1000)
+    $('#btn').click(function () {
+        $('[name="username"]').val("");
+        $('[name="password"]').val('');
+        $('span').text('');
+    })
+</script>
+</body>
+</html>

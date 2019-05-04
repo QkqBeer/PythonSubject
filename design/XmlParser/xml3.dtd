@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT Graph (cube*,sphere*) >
+<!ELEMENT cube (#PCDATA)>
+<!ELEMENT sphere (#PCDATA)>
+<!ATTLIST Graph camera ('PerspectiveCamera') Implied>
+<!ELEMENT Deatil (cube*,sphere*) >
+<!ELEMENT Event (cube*,sphere*) >
+
+
+<!ELEMENT Lathe (Deatil?,Event*) >
+
+
+
+
+
+
+
+
+
+
+
+<!ATTLIST Lathe position ENTITY REQUIRED>
+<!ATTLIST Lathe material ('MeshLambertMaterial'|'MeshFaceMaterial'|
+                          'ShaderMaterial') 'MeshLambertMaterial'>
+

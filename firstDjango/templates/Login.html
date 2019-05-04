@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<form action="/Login" method="post" >
+    <p>
+        <label>用户名：</label>
+        <input name="user" type="text"/>
+    </p>
+    <p>
+        <label>密码：</label>
+        <input name="psw" type="password"/>
+        <input type="submit"/>
+        <span style="color: red;">{{ error_mes }}</span>
+    </p>
+    <div >
+                <div >
+                    <input type="text"  placeholder="请输入验证码" name="check_code">
+                </div>
+                <div>
+                    <img src="/cmdb/check_code" onclick="changeCheckCode(this);">
+                </div>
+    </div>
+</form>
+<script src="/static/jquery.js"></script>
+<script>
+    function changeCheckCode(ths) {
+        ths.src=ths.src+'?'
+    }
+</script>
+</body>
+</html>

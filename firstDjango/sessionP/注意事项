@@ -1,0 +1,3 @@
+记得将注释settings.py 中的
+'django.middleware.csrf.CsrfViewMiddleware',
+去掉注释做一层有效防护

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .m{
+            width: 100px;
+            height: 38px;
+            line-height: 38px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+          }
+        .choose div{
+            width: 90px;
+            height: 35px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <div id="i1" class="m" onclick="show('i1');">菜单1</div>
+        <div class="choose hide">
+            <div>选项</div>
+            <div>选项</div>
+            <div>选项</div>
+        </div>
+    </div>
+    <div>
+        <div id="i2" class="m" onclick="show('i2');">菜单2</div>
+        <div class="choose hide">
+            <div>选项</div>
+            <div>选项</div>
+            <div>选项</div>
+        </div>
+    </div>
+    <div>
+        <div id="i3" class="m " onclick="show('i3');">菜单3</div>
+        <div class="choose hide">
+            <div>选项</div>
+            <div>选项</div>
+            <div>选项</div>
+        </div>
+    </div>
+
+</div>
+<script>
+    function show(id) {
+        tag=document.getElementById(id);
+        tag_parent=tag.parentElement.parentElement;
+        tag_parent_childenlist=tag_parent.children;
+        for(var i=0;i<tag_parent_childenlist.length;i++){
+            tag_parent_childenlist[i].children[1].classList.add('hide');
+        }
+        tag.nextElementSibling.classList.remove('hide') ;
+    }
+</script>
+</body>
+</html>

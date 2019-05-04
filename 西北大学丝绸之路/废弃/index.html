@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="zh-cn">
+<script type="text/javascript" src="../js/sczl/jquery.js"></script>
+<script type="text/javascript" src="js/sczl/slides.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/road.css">
+    <title></title>
+    <script type="text/javascript">
+        function AddFavorite() {
+            var sURL = document.location.href;
+            var sTitle = document.title;
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+<div class="main-bg">
+    <div class="min-nav">
+        <div class="content">
+            <div class="bdsharebuttonbox right">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a class="bds_count" data-cmd="count"></a>
+            </div>
+            <span>西北大学丝绸之路研究各领域成果展示窗口</span>
+        </div>
+    </div>
+        <div class="head">
+        <div class="content">
+            <div class="logo left"><img src="../images/LOGO.png"></div>
+            <div class="search right" style="margin-top: 17px ">
+                <form method="get" action="/home/index/search.html">
+                    <input class="search-text" type="text" name="sw"/>
+                    <button class="slider-btn2 b1">搜索</button>
+                </form>
+                <!--<form action="#" method="post">-->
+                <!--<input type="text" name="keywords" id="" class="search-text">-->
+                <!--<button type="submit" class="slider-btn2 b1">搜索</button>-->
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="main-nav">
+            <ul class="content font-YH">
+                <li><a href="http://isrs.nwu.edu.cn" class="first-menu">首页</a></li>
+                <li>
+                    <a href="/home/index/articles/mid/320.html" class="first-menu  ">研究院概况</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/338.html">
+                            研究院简介 </a> |
+                        <a href="/home/index/articles/mid/383.html">
+                            研究院领导 </a> |
+                        <a href="/home/index/articles/mid/386.html">
+                            顾问委员会 </a> |
+                        <a href="/home/index/articles/mid/387.html">
+                            学术委员会 </a> |
+                        <a href="/home/index/articles/mid/388.html">
+                            办公室 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/322.html" class="first-menu  ">研究团队</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/378.html">
+                            首席专家 </a> |
+                        <a href="/home/index/articles/mid/379.html">
+                            合作研究专家 </a> |
+                        <a href="/home/index/articles/mid/381.html">
+                            院内研究人员 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/323.html" class="first-menu  ">新闻动态</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/373.html">
+                            最新信息 </a> |
+                        <a href="/home/index/articles/mid/375.html">
+                            通知公告 </a> |
+                        <a href="/home/index/articles/mid/377.html">
+                            会议纪要 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/326.html" class="first-menu  ">课题研究</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/368.html">
+                            课题规划 </a> |
+                        <a href="/home/index/articles/mid/369.html">
+                            在研课题 </a> |
+                        <a href="/home/index/articles/mid/371.html">
+                            研究成果 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/4310.html" class="first-menu  ">哈萨克斯坦研究中心</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/4429.html">
+                            科研人员 </a> |
+                        <a href="/home/index/articles/mid/4428.html">
+                            “一带一路”中哈作家研讨会 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/4311.html" class="first-menu  ">陕西高校一带一路智库联盟</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/331.html" class="first-menu  ">西北历史研究所</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/353.html">
+                            机构简介 </a> |
+                        <a href="/home/index/articles/mid/355.html">
+                            学生培养 </a> |
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="main ">
+        <div class="content clearfix">
+            <div class="col-1">
+                <script language="javascript" src="/pc/17/js/flashview.js"></script>
+
+                <div class="col-1-focus" id="focusSlides">
+                    <div class="slides_container">
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2018-06-13_5b20bf96ba0b9_cover.jpg?v=1528872854531" alt=""
+                                width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2018-04-20_5ad96f51a6eeb_cover.png?v=1524200201915?v=1524200226286"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-10-13_59e0759d16338_cover.JPG?v=1507883074433?v=1507883126515"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf85e3cda2c_cover.jpg?v=1505723921447?v=1505723954058"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf6bf4c8f7d_cover.JPG?v=1505717270078?v=1505717329160"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf6e37a8cb1_cover.JPG?v=1505717839464?v=1505717874822"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf6d4058038_cover.JPG?v=1505717625570?v=1505717735291?v=1505717743889"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7cfc33a92_cover.JPG?v=1505721705828?v=1505721740296"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7c3e3f477_cover.JPG" alt="" width="660"
+                                height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7b9821980_cover.JPG?v=1505721301442?v=1505721341006"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7b2fc6807_cover.JPG?v=1505721154361?v=1505721188380"
+                                alt="" width="660" height="300" border="0"></a>
+                        <a target="_blank" href="/home/index/articles/mid/414.html"><img
+                                src="/upload/appendix/17/2017-09-18_59bf7a6223316_cover.JPG?v=1505721015727?v=1505721059942"
+                                alt="" width="660" height="300" border="0"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-col  left">
+                <div class="main-col-1 clearfix">
+                    <h1 class="font-YH" style="padding-top: 20px; color:#0061c9 ">
+                        <span>通知公告/新闻动态</span>
+                    </h1>
+                    <a href="/home/index/articles/mid/381.html">
+                        <span class="right" style="margin-right:40px">更多咨询》</span>
+                    </a>
+                    <div style="width: 960px;margin-top: 20px">
+
+                        <div class="news">
+                            <a href="/home/index/article/id/228640/mid/373.html">
+                                <div class="newDate">
+                                    <span >10.31</span>
+                                    <span style="border-top: 2px solid #0061c9; ">2018</span>
+                                </div>
+                                <div class="newsInfo">
+                                   <span >
+                                    哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <a href="/home/index/article/id/228640/mid/373.html">
+                                <div class="newDate">
+                                    <span >10.31</span>
+                                    <span style="border-top: 2px solid #0061c9; ">2018</span>
+                                </div>
+                                <div class="newsInfo">
+                                   <span >
+                                    哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <a href="/home/index/article/id/228640/mid/373.html">
+                                <div class="newDate">
+                                    <span >10.31</span>
+                                    <span style="border-top: 2px solid #0061c9; ">2018</span>
+                                </div>
+                                <div class="newsInfo">
+                                   <span >
+                                    哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                        <!--/*添加了三条无用信息*/-->
+                        <div class="news">
+                            <a href="/home/index/article/id/228640/mid/373.html">
+                                <div class="newDate">
+                                    <span >10.31</span>
+                                    <span style="border-top: 2px solid #0061c9; ">2018</span>
+                                </div>
+                                <div class="newsInfo">
+                                   <span >
+                                    哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <a href="/home/index/article/id/228640/mid/373.html">
+                                <div class="newDate">
+                                    <span >10.31</span>
+                                    <span style="border-top: 2px solid #0061c9; ">2018</span>
+                                </div>
+                                <div class="newsInfo">
+                                   <span >
+                                    哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news">
+                            <a href="/home/index/article/id/228640/mid/373.html">
+                                <div class="newDate">
+                                    <span >10.31</span>
+                                    <span style="border-top: 2px solid #0061c9; ">2018</span>
+                                </div>
+                                <div class="newsInfo">
+                                   <span >
+                                    哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录
+                                </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-col-1 clearfix">
+                    <h1 class="font-YH" style="padding-top: 20px; color:#0061c9 ">
+                        <span>丝路通讯</span>
+                    </h1>
+                    <div class="main-col-item left ml25">
+                        <h3 class="h2">
+                            <a href="/home/index/articles/mid/4313.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路要闻</span>
+                        </h3>
+                        <ul class="list-news pt15">
+                            <li><a href="/home/index/article/id/186261/mid/4313.html">十九大开幕习近平作报告 五次提及“一带一路”</a></li>
+                            <li><a href="/home/index/article/id/174676/mid/4313.html">“一带一路”国际合作高峰论坛硕果累累</a></li>
+                            <li><a href="/home/index/article/id/6511/mid/4313.html">“一带一路”引领对外合作潮流</a></li>
+                            <li><a href="/home/index/article/id/6510/mid/4313.html">全球经济治理的中国担当</a></li>
+                            <li><a href="/home/index/article/id/6509/mid/4313.html">专家：“一带一路”跨境金融合作需加强</a></li>
+                            <li><a href="/home/index/article/id/6508/mid/4313.html">巴林欲搭“一带一路”快车联接中东与中国</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="main-col-item left ml25">
+                        <h3 class="h2">
+                            <a href="/home/index/articles/mid/4314.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路论坛</span>
+                        </h3>
+                        <ul class="list-news pt15">
+                            <li><a href="/home/index/article/id/186257/mid/4314.html">卢山冰：探索陕西自贸试验区特色化发展新模式</a></li>
+                            <li><a href="/home/index/article/id/174680/mid/4314.html">陕西：主动融入“一带一路”大格局</a></li>
+                            <li><a href="/home/index/article/id/186262/mid/4314.html">专家：十九大后“一带一路”高位运行开启新征程</a></li>
+                            <li><a href="/home/index/article/id/174682/mid/4314.html">胡和平：为“一带一路”建设注入“陕西动力”</a></li>
+                            <li><a href="/home/index/article/id/174692/mid/4314.html">王永康：融入“一带一路”建设 加快大西安大发展</a></li>
+                            <li><a href="/home/index/article/id/6269/mid/4314.html">卢山冰:“一带一路”更多强调“走出去” </a></li>
+
+                        </ul>
+                    </div>
+                    <div class="main-col-item left ml25">
+                        <h3 class="h2">
+                            <a href="/home/index/articles/mid/4315.html">
+                                <span class="tips right">更多》</span>
+                            </a>
+                            <span class="font-YH">丝路发展</span>
+                        </h3>
+                        <ul class="list-news pt15">
+                            <li><a href="/home/index/article/id/186264/mid/4315.html">《中国的北极政策》白皮书发表 共建“冰上丝绸之路”</a></li>
+                            <li><a href="/home/index/article/id/186263/mid/4315.html">2018年将推进21世纪海上丝绸之路建设</a></li>
+                            <li><a href="/home/index/article/id/6264/mid/4315.html">中韩丝绸之路研讨会：“一带一路”与“欧亚倡议”共赢发展</a></li>
+                            <li><a href="/home/index/article/id/6129/mid/4315.html">丝绸之路经济带的纵深背景与地缘战略</a></li>
+                            <li><a href="/home/index/article/id/6105/mid/4315.html">西安：丝路经济带上的"新起点"</a></li>
+                            <li><a href="/home/index/article/id/6103/mid/4315.html">卢山冰教授应邀主持区域经济发展论坛对话活动</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-col-3 clearfix">
+                    <h2 class="h2">
+                        <a href="/home/index/articles/mid/381.html">
+                            <span class="tips right">更多》</span>
+                        </a>
+                        <span class="font-YH">研究团队</span>
+                    </h2>
+                       <button id="left" style="background: url(../left.jpg) no-repeat center; float: left;width: 45px;height: 45px; margin-top: 130px;border: 0px">
+
+                       </button>
+                    <div class="personDiv">
+                        <img src="../qkq.jpg"
+                             alt="">
+                        <h6>特聘外籍专家亚历山大·卢金（ALEXANDER LUKIN）</h6>
+                        <span>俄罗斯高等经济研究大学国际关系学院教授</span>
+                    </div>
+                    <div class="personDiv">
+                        <img src="../qkq.jpg"
+                             alt="">
+                        <h6>特聘外籍专家亚历山大·卢金（ALEXANDER LUKIN）</h6>
+                        <span>俄罗斯高等经济研究大学国际关系学院教授</span>
+                    </div>
+                    <div class="personDiv">
+                        <img src="../qkq.jpg"
+                             alt="">
+                        <h6>特聘外籍专家亚历山大·卢金（ALEXANDER LUKIN）</h6>
+                        <span>俄罗斯高等经济研究大学国际关系学院教授</span>
+                    </div>
+                    <div class="personDiv">
+                        <img src="../qkq.jpg"
+                             alt="">
+                        <h6>特聘外籍专家亚历山大·卢金（ALEXANDER LUKIN）</h6>
+                        <span>俄罗斯高等经济研究大学国际关系学院教授</span>
+                    </div>
+                    <button id="right" style="background: url(../right.jpg) no-repeat center; float: left;width: 45px;height: 45px;margin-top: 130px;border: 0px">
+
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="fd-content">
+            <div class="content clearfix">
+                <ul class="fd-text">
+                    <a style="color: black;text-decoration:none">友情链接：</a>
+                    <a href="http://www.silk-road.com/toc/index.html" target="_blank">丝绸之路基金会</a>
+                    | <a href="http://idp.nlc.gov.cn/" target="_blank">国际敦煌项目：丝绸之路在线</a>
+                    | <a href="http://www.slwhw.cn/" target="_blank">丝路文化网</a>
+                    | <a href="http://silkroad.fudan.edu.cn/" target="_blank">丝绸之路地理信息系统</a>
+                    | <a href="http://www.zggds.pku.edu.cn/" target="_blank">北京大学中国古代史研究中心</a>
+                    | <a href="http://yugong.fudan.edu.cn/index.php" target="_blank">复旦大学历史地理研究中心</a>
+                    | <a href="http://heshan.snnu.edu.cn/index.aspx" target="_blank">陕西师范大学西北历史环境与经济社会发展研究院</a>
+                    | <a href="http://iwr.cass.cn/" target="_blank">中国宗教学术网</a>
+                    | <a href="http://www.iahs.fudan.edu.cn/cn/index.asp" target="_blank">复旦大学文史研究院</a>
+                    | <a href="http://dhxyjs.lzu.edu.cn/" target="_blank">兰州大学敦煌学研究所</a>
+                    | <a href="http://www.sinoss.net/" target="_blank">中国高校人文社会科学信息网</a>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content text-center">
+                <p>西北大学丝绸之路研究院版权所有 | <a href="http://kuku.web.nwu.edu.cn">登录</a>
+                </p>
+                <p> 地址：西安市太白北路229号 邮编：710069 email：isrs@nwu.edu.cn</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.main-nav ul li').hover(function () {
+                $('.sub-nav').addClass('hidden')
+                $(this).find('.sub-nav').removeClass('hidden')
+            });
+        });
+    </script>
+
+    <script>
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "share": {}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+    <script>
+        //研究团队的按钮left，right
+
+    </script>
+</body>
+
+</html>

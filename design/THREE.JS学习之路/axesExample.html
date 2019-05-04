@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="three.js"></script>
+    <script type="text/javascript" src="jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="dat.gui.js"></script>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="WebGL-output">
+
+</div>
+<script type="text/javascript">
+    $(function () {
+
+        var scene = new THREE.Scene();
+        //scene.fog = new THREE.Fog(0xffffff, 0.015, 100)
+        //scene.fog = new THREE.Fog(0xffffff, controls.fog_near, controls.fog_far)
+        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setClearColor(0xEEEEEE, 1.0);
+        renderer.antialias = true
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMapEnabled = true //添加渲染阴影
+
+        //添加坐标系
+        var axes = new THREE.AxisHelper(20);
+        scene.add(axes)
+
+        //添加平面
+        var planeGeometry = new THREE.PlaneGeometry(60, 20, 20, 20)
+        var planeMaterial = new THREE.MeshLambertMaterial({color:0xffffff})
+        var plane = new THREE.Mesh(planeGeometry, planeMaterial)
+        plane.rotation.x = -0.5 * Math.PI;
+        plane.position.x = 15;
+        plane.position.y = 0;
+        plane.position.z = 0;
+        plane.receiveShadow = true
+        scene.add(plane)
+
+        //添加正方体
+        var cubeGeometry = new THREE.CubeGeometry(4, 4, 4);
+        var cubeMaterial = new THREE.MeshLambertMaterial({color:0xff7777})
+        var cube = new THREE.Mesh(cubeGeometry, cubeMaterial)
+        cube.position.x = -4;
+        cube.position.y = 3;
+        cube.position.z = 0;
+        cube.castShadow = true;
+        scene.add(cube)
+
+        //添加球体
+        var sphereGeometry = new THREE.SphereGeometry(4, 25, 25)
+        var sphereMaterial = new THREE.MeshLambertMaterial({color:0x7777ff})
+        var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
+        sphere.position.x = 20;
+        sphere.position.y = 4;
+        sphere.position.z = 2;
+        sphere.castShadow = true;
+        scene.add(sphere)
+
+        //添加光源
+        //聚光灯光源
+//        var spotLight = new THREE.SpotLight(0xffffff)
+//        //spotLight.position.set(-40, 60, -10)
+//        spotLight.castShadow = true
+//        scene.add(spotLight)
+        //环境光，弱化阴影或者添加一些颜色
+        var ambiColor = '#0c0c0c'
+        var ambientLight = new THREE.AmbientLight(ambiColor);
+        scene.add(ambientLight)
+        //添加点光源
+        var spotLightColor = "#ccffcc";
+        var spotLight = new THREE.SpotLight(spotLightColor)
+        spotLight.distance = 100;
+        spotLight.intensity = 1;
+        scene.add(spotLight)
+
+        var sphereLight = new THREE.SphereGeometry(0.2);
+        var sphereLightMaterial = new THREE.MeshBasicMaterial({color: 0xac6c25});
+        var sphereLightMesh = new THREE.Mesh(sphereLight, sphereLightMaterial);
+        sphereLightMesh.castShadow = true;
+
+        sphereLightMesh.position = new THREE.Vector3(3, 0, 3);
+        scene.add(sphereLightMesh);
+
+        //添加照相机
+        camera.position.x = -30;
+        camera.position.y = 50;
+        camera.position.z = 30;
+        camera.lookAt(scene.position); //镜头指向场景中心
+        document.getElementById("WebGL-output").appendChild(renderer.domElement);
+
+        var step = 0;
+        var phase = 0;
+        var invert = 1;
+        var controls = new function () {
+            this.rotationSpeed = 0.02;
+            this.bouncingSpeed = 0.03;
+            this.ambientColor = ambiColor;
+            this.spotLightColor = '#ffffff';
+            this.intensity = 1;
+            this.distance = 100;
+        }
+
+        var gui = new dat.GUI();
+        gui.add(controls, 'rotationSpeed', 0, 0.5); //控制范围 0 - 0.5
+        gui.add(controls, 'bouncingSpeed', 0, 0.5);
+        //添加环境光的颜色改变的UI
+        gui.addColor(controls, 'ambientColor').onChange(function (e) {
+            ambientLight.color = new THREE.Color(e);
+            //颜色对象 ambientLight.color
+        });
+        gui.addColor(controls, 'spotLightColor').onChange(function (e) {
+            spotLight.color = new THREE.Color(e)
+        })
+        gui.add(controls, 'intensity', 0, 3).onChange(function (e) {
+            spotLight.intensity = e;
+        })
+        gui.add(controls, 'distance', 0, 100).onChange(function (e) {
+            spotLight.distance = e;
+        })
+        renderScene()
+
+        // 动画渲染
+        function renderScene() {
+            cube.rotation.x += controls.rotationSpeed;
+            cube.rotation.y += controls.rotationSpeed;
+            cube.rotation.z += controls.rotationSpeed;
+
+            step += controls.bouncingSpeed;
+            sphere.position.x = 20 + (10 * (Math.cos(step)))
+            sphere.position.y = 2 + (10 * (Math.abs(Math.sin(step))))
+
+            //改变光源位置
+            if (phase > 2 * Math.PI) {
+                invert = invert * -1;
+                phase -= 2 * Math.PI;
+            } else {
+                phase += controls.rotationSpeed;
+            }
+            sphereLightMesh.position.z = +(7 * (Math.sin(phase)));
+            sphereLightMesh.position.x = +(14 * (Math.cos(phase)));
+            sphereLightMesh.position.y = 5;
+
+            if (invert < 0) {
+                var pivot = 14;
+                sphereLightMesh.position.x = (invert * (sphereLightMesh.position.x - pivot)) + pivot;
+            }
+
+            spotLight.position.copy(sphereLightMesh.position);
+//            //var target = new THREE.Object3D();
+//            //target.position.copy(sphereLightMesh.position)
+//            //spotLight.target = target
+            requestAnimationFrame(renderScene)
+            renderer.render(scene, camera);
+        }
+    })
+</script>
+
+
+</body>
+</html>

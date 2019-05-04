@@ -1,0 +1,10 @@
+.body{
+    margin: 0px;
+}
+.page_list a{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: #dddddd;
+    color: black;
+}

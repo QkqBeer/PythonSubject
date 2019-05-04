@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="main" style="width:400px;height: 300px;background-color: red">
+    <div id="content" style="background-color: darkolivegreen;width: 200px;height: 150px">
+    </div>
+</div>
+<script>
+    var myMain=document.getElementById('main')
+    var myContent=document.getElementById('content')
+    myMain.addEventListener('click',function () {console.log('main')},false)
+    myContent.addEventListener('click',function () {console.log('content')},false)
+//    true 表示捕捉，false 表示冒泡
+//    myMain.addEventListener('click',function () {console.log('main')},true)
+//    myContent.addEventListener('click',function () {console.log('content')},true)
+
+</script>
+</body>
+</html>

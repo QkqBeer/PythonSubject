@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="sp/tijiao" method="post">
+    {% csrf_token %}
+    <input type="text" name="user"/>
+    <input type="text" name="psw"/>
+    <input type="submit" value="提交" />
+    <input id="btn" type="button" value="ajax提交" />
+</form>
+<script src="/static/jquery.js"></script>
+<script src="/static/jquery.cookie.js"></script>
+<script >
+    $(function () {
+        $.ajaxSetup({
+            beforeSend:function (xhr,settings) {
+                xhr.setRequestHeader("X-CSRFtoken",$.cookie('csrftoken'));
+            }
+        });
+
+        $('#btn').click(function () {
+            $.ajax({
+                url:'sp/tijiao',
+                type:'POST',
+                data:{'user':'qkq','psw':'123'},
+                success:function (arg) {
+                    console.log(arg)
+                }
+            }
+        )
+        })
+    })
+</script>
+</body>
+</html>

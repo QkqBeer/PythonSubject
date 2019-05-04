@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="XmlParse.js"></script>
+    <script src="action.js"></script>
+    <script src="TrackballControls.js"></script>
+</head>
+<body onload="init()">
+<div id="WebGL-output">
+
+</div>
+</body>
+<script type="text/javascript">
+    var renderer;
+    var camera;
+    var scene;
+    var control;
+function init() {
+    var xmlDoc;
+    xmlDoc = checkXMLDocObj('3DGraph.xml');
+    var dic = xmlParserBuildTree(xmlDoc);
+    renderer = dic['renderer'];
+    camera = dic['camera'];
+    scene = dic['scene'];
+    control = dic['controls'];
+    document.getElementById("WebGL-output").appendChild(renderer.domElement);
+    animate();
+}
+function render(){
+    control.update();
+    renderer.render(scene, camera);
+}
+//动画
+function animate() {
+        render();
+        requestAnimationFrame(animate);
+}
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    body{
+        background-color: #dddddd;
+    }
+    #canvas{
+        margin: 20px;
+        padding: 20px;
+        background-color: white;
+        border: thin inset #aaaaaa;
+        width: 600px;
+        height: 300px;
+    }
+    #rubberbandiv{
+            position: absolute;
+            border: 3px solid black;
+            cursor: crosshair;
+            display: none;
+        }
+</style>
+</head>
+<body>
+<div id="rubberbandiv"></div>
+<canvas id="canvas" width="600" height="300">
+    不支持canvas
+</canvas>
+<script src="example.js"></script>
+</body>
+</html>

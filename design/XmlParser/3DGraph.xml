@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Graph camera="PerspectiveCamera" renderer="WebGLRenderer" src="action.js" light="SpotLight">
+    <cube position="-2, 5, 0" material="MeshLambertMaterial" size="18,12,12">
+        <Event>
+            <event class="mouse" eventName="click"></event>
+            <event class="mouse" eventName="leftSlide"></event>
+        </Event>
+        <Detail segments="3 ,3, 4" function="" radian="" pel = "triangle"></Detail>
+    </cube>
+    <cube position="100, 5, 0" material="MeshLambertMaterial" size="18,12,12">
+        <Event>
+            <event class="mouse" eventName="click"></event>
+            <event class="mouse" eventName="leftSlide"></event>
+        </Event>
+        <Detail segments="3 ,3, 4" function="" radian="" pel = "triangle"></Detail>
+    </cube>
+    <complexGraph style="union">
+        <!--默认第一个为主操作对象-->
+        <cube position="-20, 5, 0" material="MeshLambertMaterial" size="18,13,11"/>
+        <sphere position="-15, 5, 0" material="MeshLambertMaterial" radius="8"/>
+        <Event>
+            <event class="mouse" eventName="click"></event>
+            <event class="mouse" eventName="doubleClick"></event>
+        </Event>
+    </complexGraph>
+    <sphere position="13, 0, 0" material="MeshLambertMaterial" radius="6"></sphere>
+    <sphere position="10, 10, 0" material="MeshLambertMaterial" radius="6"></sphere>
+    <sphere position="100, 10, 0" material="MeshLambertMaterial" radius="20"></sphere>
+    <plane position="11, 1, 9" material="MeshBasicMaterial" size="15, 20">
+        <Event>
+            <event class="mouse" eventName="click"></event>
+        </Event>
+        <Detail segments="5, 4" function="" radian="" pel = "triangle"></Detail>
+        <!--分段，函数，弧度，图元-->
+    </plane>
+    <plane position="100, 1, 9" material="MeshBasicMaterial" size="15, 20">
+        <Event>
+            <event class="mouse" eventName="click"></event>
+        </Event>
+        <Detail segments="5, 4" function="" radian="" pel = "triangle"></Detail>
+        <!--分段，函数，弧度，图元-->
+    </plane>
+</Graph>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>touchFinger</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <link rel="stylesheet" href="./asset/index.css">
+</head>
+<body>
+    <div class="header">touchFinger</div>
+    <div class="example">
+    <div class="title">pressMove</div>
+    <div class="imgBox">
+    <img id="pressMoveImg" src="asset/test.png" />
+    </div>
+    <div class="title">pinch(捏)</div>
+    <div class="imgBox">
+        <img id="pinchImg" src="asset/test.png" />
+    </div>
+    <div class="title">rotate(旋转)</div>
+    <div class="imgBox">
+        <img id="rotateImg" src="asset/test.png" />
+    </div>
+    <div class="title">pinch+rotate</div>
+    <div class="imgBox">
+        <img id="pinchRotateImg" src="asset/test.png" />
+    </div>
+    <div class="title">doubleTap</div>
+    <div class="imgBox">
+        <img id="doubleTapImg" src="asset/test.png" />
+    </div>
+    <div class="title">swipe</div>
+        <div class="imgBox pb6">
+    <div class="swipeBox">
+        <div class="scroll"  id="swipeScroll">
+            <img  src="asset/test.png" /> <img  src="asset/test2.png" /> <img  src="asset/test3.png" />
+        </div>
+        <div class="nuclear-nav">
+            <a data-index="0" class="active"></a>
+            <a data-index="1" class=" "></a>
+            <a data-index="2" class=" "></a>
+        </div>
+    </div>
+        </div>
+    <div class="title">longTap</div>
+        <div class="imgBox pb6">
+    <div class=" longTapBox" id="longTapBox">
+        <img id="longTapImg" src="asset/test.png" />
+        <div class="overlay" id="overlay">
+            <img src="asset/yes.png"/>
+        </div>
+    </div>
+        </div>
+
+        <div class="title">tap</div>
+        <div class="imgBox pb6">
+            <div class=" longTapBox" id="tapBox">
+                <img  src="asset/test.png" />
+                <div class="overlay2" id="overlay2">
+                    <img src="asset/yes.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script src="asset/transform.js"></script>
+    <script src="asset/touchFinger.js"></script>
+    <script src="asset/to.js"></script>
+    <script src="asset/example.js"></script>
+</body>
+</html>

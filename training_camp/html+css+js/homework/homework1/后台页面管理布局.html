@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pg_head {
+            width: 100%;
+            height: 48px;
+            background-color: #dddddd;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .personal_information {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            right: 200px;
+            top: 48px;
+            background-color: white;
+            z-index: 20;
+            display: none;
+            color: black;
+        }
+
+        .pg_head .button_personal {
+            width: 200px;
+            float: right;
+            color: white;
+            text-align: left;
+            line-height: 48px
+        }
+
+        .button_personal:hover {
+            background-color: rgba(0, 0, 0, 0.82);
+        }
+
+        .button_personal:hover .personal_information {
+            display: block;
+        }
+
+        .pg_head .button_collect {
+            width: 400px;
+            float: left;
+            color: white;
+            text-align: right;
+            line-height: 48px
+        }
+
+        .menu {
+            width: 20%;
+            min-width: 200px;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            background-color: red;
+            min-width: 300px;
+        }
+
+        .content {
+            width: 80%;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            bottom: 0;
+            background-color: blue;
+            overflow: auto;
+        }
+
+        .pg_body {
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body style="margin: 0 auto">
+<div class="pg_head">
+    <div class="button_collect">
+        收藏网站
+    </div>
+    <div class="button_personal">
+        <div>
+            <div style="float: left;">
+                <img style="border-radius: 50%;height: 40px;width:40px;" src="girl.jpg">
+            </div>
+            <div style="float: left">个人信息</div>
+        </div>
+
+        <div class="personal_information">
+            <div>账号信息</div>
+            <div>注销</div>
+        </div>
+    </div>
+</div>
+<div class="pg_body">
+    <div class="menu">
+        <div>....</div>
+    </div>
+    <div class="content">
+        <div style="height: 1200px">,,,,</div>
+    </div>
+
+</div>
+</body>
+</html>

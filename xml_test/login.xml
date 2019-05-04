@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pattern-layout-relative>
+    <login-pattern>
+        <parameter>
+            <type>phone-auto</type>
+            <layout>typical</layout>
+            <css>child</css>
+            <language>Chinese</language>
+        </parameter>
+        <data>
+            <source type="string">username</source>
+            <source type="password">password</source>
+        </data>
+        <event>
+            <click>confirm()</click>
+            <click>cancel()</click>
+        </event>
+    </login-pattern>
+</pattern-layout-relative>

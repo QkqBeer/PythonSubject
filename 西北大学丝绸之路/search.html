@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-cn">
+<script type="text/javascript" src="js/sczl/jquery.js"></script>
+<script type="text/javascript" src="js/sczl/slides.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/road.css">
+    <title></title>
+    <script type="text/javascript">
+        function AddFavorite() {
+            var sURL = document.location.href;
+            var sTitle = document.title;
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/pagination.css"/>
+
+</head>
+
+<body>
+<div class="main-bg">
+    <div class="min-nav">
+        <div class="content">
+            <div class="bdsharebuttonbox right">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a class="bds_count" data-cmd="count"></a>
+            </div>
+            <span>西北大学丝绸之路研究各领域成果展示窗口</span>
+        </div>
+    </div>
+    <div class="head">
+        <div class="content">
+            <div class="logo left"><img src="images/LOGO.png"></div>
+            <div class="search right" style="margin-top: 17px ">
+                <form method="get" action="/home/index/search.html">
+                    <input class="search-text" type="text" name="sw"/>
+                    <button class="slider-btn2 b1">搜索</button>
+                </form>
+                <!--<form action="#" method="post">-->
+                <!--<input type="text" name="keywords" id="" class="search-text">-->
+                <!--<button type="submit" class="slider-btn2 b1">搜索</button>-->
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="main-nav">
+            <ul class="content font-YH">
+                <li><a href="http://isrs.nwu.edu.cn" class="first-menu">首页</a></li>
+                <li>
+                    <a href="/home/index/articles/mid/320.html" class="first-menu  ">研究院概况</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/338.html">
+                            研究院简介 </a> |
+                        <a href="/home/index/articles/mid/383.html">
+                            研究院领导 </a> |
+                        <a href="/home/index/articles/mid/386.html">
+                            顾问委员会 </a> |
+                        <a href="/home/index/articles/mid/387.html">
+                            学术委员会 </a> |
+                        <a href="/home/index/articles/mid/388.html">
+                            办公室 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/322.html" class="first-menu  ">研究团队</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/378.html">
+                            首席专家 </a> |
+                        <a href="/home/index/articles/mid/379.html">
+                            合作研究专家 </a> |
+                        <a href="/home/index/articles/mid/381.html">
+                            院内研究人员 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/323.html" class="first-menu  ">新闻动态</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/373.html">
+                            最新信息 </a> |
+                        <a href="/home/index/articles/mid/375.html">
+                            通知公告 </a> |
+                        <a href="/home/index/articles/mid/377.html">
+                            会议纪要 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/326.html" class="first-menu  ">课题研究</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/368.html">
+                            课题规划 </a> |
+                        <a href="/home/index/articles/mid/369.html">
+                            在研课题 </a> |
+                        <a href="/home/index/articles/mid/371.html">
+                            研究成果 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/4310.html" class="first-menu  ">哈萨克斯坦研究中心</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/4429.html">
+                            科研人员 </a> |
+                        <a href="/home/index/articles/mid/4428.html">
+                            “一带一路”中哈作家研讨会 </a> |
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/4311.html" class="first-menu  ">陕西高校一带一路智库联盟</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                    </div>
+                </li>
+                <li>
+                    <a href="/home/index/articles/mid/331.html" class="first-menu  ">西北历史研究所</a>
+                    <div class="sub-nav hidden" style="width:900px">
+                        <a href="/home/index/articles/mid/353.html">
+                            机构简介 </a> |
+                        <a href="/home/index/articles/mid/355.html">
+                            学生培养 </a> |
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="main ">
+        <div class="content clearfix">
+            <div class="main-col">
+                <div class="breadcrumb" >
+                    <a href="http://isrs.nwu.edu.cn">首页</a> &gt; <a href="#">搜索结果</a>
+                </div>
+                <!--<div style="float: left; width: 200px;height: auto;border: 0px;"-->
+                     <!--class="slider-col-1 clearfix">-->
+                    <ul style="float: left; width: 200px">
+                        <li class="liHover">
+                            <a href="/home/index/articles/mid/373.html" style="text-decoration:none;">
+                                <h2 style="padding-top: 5px">最新信息</h2> </a>
+                        </li>
+                        <li class="liHover">
+                            <a href="/home/index/articles/mid/375.html"  style="text-decoration:none;">
+                                <h2 style="padding-top: 5px">通知公告</h2> </a>
+                        </li>
+                        <li class="liHover">
+                            <a href="/home/index/articles/mid/377.html"  style="text-decoration:none;">
+                                <h2 style="padding-top: 5px">会议纪要</h2> </a>
+                        </li>
+                    </ul>
+                <!--</div>-->
+                <div class="list-content" style="float: left; width: 700px;margin-left: 10px">
+                    <ul>
+                        <li><a href="/home/index/searcharticle/id/229960.html">卢山冰院长受邀接受凤凰卫视采访</a><span class="right">2018年11月19日</span>
+                        </li>
+                        <li><a href="/home/index/searcharticle/id/229589.html">人民大学师生代表团访问我院</a><span class="right">2018年11月12日</span>
+                        </li>
+                        <li><a href="/home/index/searcharticle/id/228640.html">哈萨克斯坦档案馆馆长到访西北大学并签署合作备忘录</a><span
+                                class="right">2018年10月31日</span></li>
+                        <li><a href="/home/index/searcharticle/id/228639.html">俄罗斯国际关系专家莉哈切娃到访丝绸之路研究院</a><span
+                                class="right">2018年10月31日</span></li>
+                        <li><a href="/home/index/searcharticle/id/228377.html">埃及《广播与电视》杂志总编辑到访丝绸之路研究院</a><span
+                                class="right">2018年10月27日</span></li>
+                        <li><a href="/home/index/searcharticle/id/227516.html">德中企业家联合会和陕鼓欧洲研究发展公司到访西北大学丝绸之路研究院</a><span
+                                class="right">2018年10月12日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/227060.html">西北大学“一带一路”五周年成果回顾（八）——卢山冰教授与“一带一路”</a><span
+                                class="right">2018年10月06日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/227058.html">西北大学“一带一路”五周年成果回顾（七）——李利安教授与“一带一路”</a><span
+                                class="right">2018年10月06日</span></li>
+                        <li><a href="/home/index/searcharticle/id/227057.html">西北大学“一带一路”五周年成果回顾（六）——西北大学编审卫玲与“一带一路”</a><span
+                                class="right">2018年10月06日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/227055.html">西北大学“一带一路”五周年成果回顾（五）——王颂吉副教授与“一带一路”</a><span
+                                class="right">2018年10月06日</span></li>
+                        <li><a href="/home/index/searcharticle/id/227051.html">五年之巨：“一带一路”深刻影响中国与世界</a><span
+                                class="right">2018年10月06日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/226949.html">西北大学“一带一路”五周年成果回顾（四）——西北大学校长郭立宏与“一带一路”</a><span
+                                class="right">2018年09月30日</span></li>
+                        <li><a href="/home/index/searcharticle/id/226943.html">卢山冰应邀参加丝绸之路智库峰会并做主题发言</a><span
+                                class="right">2018年09月30日</span></li>
+                        <li><a href="/home/index/searcharticle/id/226865.html">卢山冰教授应邀为西安市政协常委会做专题报告</a><span
+                                class="right">2018年09月29日</span></li>
+                        <li><a href="/home/index/searcharticle/id/226842.html">关于丝绸之路研究院特聘教授选聘结果的公示</a><span
+                                class="right">2018年09月28日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/226777.html">西北大学“一带一路”五周年成果回顾（三）——马莉莉教授与“一带一路”</a><span
+                                class="right">2018年09月27日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/223152.html">西北大学“一带一路”五周年成果回顾（二）——白永秀教授与“一带一路”</a><span
+                                class="right">2018年09月26日</span></li>
+                        <li>
+                            <a href="/home/index/searcharticle/id/223116.html">西北大学“一带一路”五周年成果回顾（一）──王建新教授的丝路考古梦</a><span
+                                class="right">2018年09月25日</span></li>
+                        <li><a href="/home/index/searcharticle/id/223076.html">卢山冰院长应邀参加“一带一路”国际智库论坛</a><span
+                                class="right">2018年09月25日</span></li>
+                        <li><a href="/home/index/searcharticle/id/223075.html">卢山冰受邀主讲 “一带一路”倡议行动与陕西贡献公开课</a><span
+                                class="right">2018年09月25日</span></li>
+                    </ul>
+
+                </div>
+                <div style="width: 1130px;float: left;text-align: center;" >
+                    <span style="font-size: 19px; margin-left: 5px"><a>&laquo;</a></span>
+                        <span style="font-size: 19px; margin-left: 5px">1</span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=2">2</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=3">3</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=4">4</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=5">5</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=6">6</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=7">7</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=8">8</a></span>
+                        <span class="disabled"><span>...</span></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=28">28</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=29">29</a></span>
+                        <span style="font-size: 19px; margin-left: 5px"><a href="/home/index/search.html?sw=&amp;page_len=20&amp;page=2">&raquo;</a></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="fd-content">
+            <div class="content clearfix">
+                <ul class="fd-text">
+                    <a style="color: black;text-decoration:none">友情链接：</a>
+                    <a href="http://www.silk-road.com/toc/index.html" target="_blank">丝绸之路基金会</a>
+                    | <a href="http://idp.nlc.gov.cn/" target="_blank">国际敦煌项目：丝绸之路在线</a>
+                    | <a href="http://www.slwhw.cn/" target="_blank">丝路文化网</a>
+                    | <a href="http://silkroad.fudan.edu.cn/" target="_blank">丝绸之路地理信息系统</a>
+                    | <a href="http://www.zggds.pku.edu.cn/" target="_blank">北京大学中国古代史研究中心</a>
+                    | <a href="http://yugong.fudan.edu.cn/index.php" target="_blank">复旦大学历史地理研究中心</a>
+                    | <a href="http://heshan.snnu.edu.cn/index.aspx" target="_blank">陕西师范大学西北历史环境与经济社会发展研究院</a>
+                    | <a href="http://iwr.cass.cn/" target="_blank">中国宗教学术网</a>
+                    | <a href="http://www.iahs.fudan.edu.cn/cn/index.asp" target="_blank">复旦大学文史研究院</a>
+                    | <a href="http://dhxyjs.lzu.edu.cn/" target="_blank">兰州大学敦煌学研究所</a>
+                    | <a href="http://www.sinoss.net/" target="_blank">中国高校人文社会科学信息网</a>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content text-center">
+                <p>西北大学丝绸之路研究院版权所有 | <a href="http://kuku.web.nwu.edu.cn">登录</a>
+                </p>
+                <p> 地址：西安市太白北路229号 邮编：710069 email：isrs@nwu.edu.cn</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.main-nav ul li').hover(function () {
+                $('.sub-nav').addClass('hidden')
+                $(this).find('.sub-nav').removeClass('hidden')
+            });
+        });
+    </script>
+
+    <script>
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "share": {}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+</body>
+
+</html>

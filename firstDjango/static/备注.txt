@@ -1,0 +1,5 @@
+里面存放的是静态文件：js，css文件
+为了能够访问需要在settings文件中加上路径,静态文件生效
+STATICFILES_DIRS=(
+os.path.join(BASE_DIR,'文件名'),
+)

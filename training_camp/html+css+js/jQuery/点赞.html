@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点赞</title>
+    <style>
+        .container{
+            position: relative;
+            width: 40px;
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <span>赞</span>
+</div>
+<script src="F:\PythonSubject\training_camp\html+css+js\jQuery\jquery.js"></script>
+<script>
+    $('span').click(function () {
+        var tag=document.createElement('span')
+        var right=0;
+        var top=0;
+        var fontsize=15;
+        var opacity=1;
+        $(tag).text('+1');
+        $(tag).css('position','absolute')
+        $(tag).css('right',right+'px')
+        $(tag).css('top',top+'px')
+        $(tag).css('fontSize',fontsize+'px')
+        $(tag).css('opacity',opacity)
+        $(this).append(tag)
+        var t=setInterval(function () {
+             right=right-5;
+             top=top-5;
+             fontsize=fontsize+5;
+             opacity=opacity-0.1;
+              $(tag).css('right',right+'px')
+              $(tag).css('top',top+'px')
+              $(tag).css('fontSize',fontsize+'px')
+              $(tag).css('opacity',opacity)
+             if(opacity<0){
+                  clearInterval(t);
+                 $(tag).remove()
+             }
+
+        },100)
+    })
+</script>
+</body>
+</html>

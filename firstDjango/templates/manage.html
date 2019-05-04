@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pg_head {
+            width: 100%;
+            height: 48px;
+            background-color: #dddddd;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .personal_information {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            right: 200px;
+            top: 48px;
+            background-color: white;
+            z-index: 20;
+            display: none;
+            color: black;
+        }
+
+        .pg_head .button_personal {
+            width: 200px;
+            float: right;
+            color: white;
+            text-align: left;
+            line-height: 48px
+        }
+
+        .button_personal:hover {
+            background-color: rgba(0, 0, 0, 0.82);
+        }
+
+        .button_personal:hover .personal_information {
+            display: block;
+        }
+
+        .pg_head .button_collect {
+            width: 400px;
+            float: left;
+            color: white;
+            text-align: right;
+            line-height: 48px
+        }
+
+        .menu {
+            width: 20%;
+            min-width: 200px;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            min-width: 300px;
+            font-size: 25px;
+            color: black;
+            border-right: rgba(0, 0, 0, 0.82) 1px solid;
+        }
+
+        .content {
+            width: 80%;
+            position: absolute;
+            top: 48px;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+        }
+
+        .pg_body {
+            z-index: 10;
+        }
+
+        .shade {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 11;
+        }
+
+        .add_host,.edit_host,.del_host {
+            position: fixed;
+            width: 400px;
+            height: 300px;
+            left: 50%;
+            top: 100px;
+            margin-left: -200px;
+            z-index: 12;
+            background-color: white;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body style="margin: 0 auto">
+<div class="pg_head">
+    <div class="button_collect">
+        收藏网站
+    </div>
+    <div class="button_personal">
+        <div>
+            <div style="float: left;">
+                <img style="border-radius: 50%;height: 40px;width:40px;">
+            </div>
+            <div style="float: left">{{ username }}个人信息</div>
+        </div>
+
+        <div class="personal_information">
+            <div>账号信息</div>
+            <div>注销</div>
+        </div>
+    </div>
+</div>
+<div class="pg_body">
+    <div class="menu">
+        <ul>
+            {% for v in BussinessList %}
+                <li>
+                    <a href="/db/detail-{{ v.id }}.html">{{ v.Bname }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <input id="addhost" type="button" value="添加" style="font-size: larger;width: 200px;"/>
+    </div>
+    <div class="content">
+        <div style="height: 1200px">
+            <div style="width: 200px;height:48px;border-right:48px;margin: 0 auto;font-size: larger">
+                成员信息一览表
+            </div>
+            <table  style="margin: 0 auto;" border="1px">
+                <thead>
+                <tr>
+                    <th>name</th>
+                    <th>ip</th>
+                    <th>port</th>
+                    <th>business</th>
+                    <th>opration</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for v in HostList %}
+                    <tr hid="{{ v.hid }}" bid="{{ v.f_id }}">
+                        <td name="name">{{ v.Hname }} </td>
+                        <td name="ip">{{ v.ip }} </td>
+                        <td name="port">{{ v.port }} </td>
+                        <td>{{ v.f.Bname }}</td>
+                        <td><a class="edit">编辑</a>|<a class="delete">删除</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+<div class="shade hide">
+</div>
+<div class="add_host hide">
+    <div style="margin-left: 25%;margin-top:10%;">
+    <form method="post" action="manage" >
+    <div>
+        <input name="name" type="text" placeholder="hostname"/>
+    </div>
+    <div>
+        <input name="ip" type="text" placeholder="ip"/>
+    </div>
+    <div>
+        <input name="port" type="text" placeholder="port"/>
+    </div>
+    <div>
+        <select name="bid">
+            {% for foo in BussinessList %}
+            <option value="{{ foo.id }}">{{ foo.Bname }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <input type="submit" value="提交"/>
+    <input id="cancel" type="button" value="取消"/>
+    </form>
+    </div>
+</div>
+<div class="edit_host hide">
+    <div style="margin-left: 25%;margin-top:10%;">
+    <form  id="edit_form" method="post" action="manage">
+        <input name="hid" type="text" style="display: none"/>
+        <input name="name" type="text" />
+        <input name="ip" type="text" />
+        <input name="port" type="text"/>
+        <div>
+        <select name="bid">
+            {% for foo in BussinessList %}
+            <option value="{{ foo.id }}">{{ foo.Bname }}</option>
+            {% endfor %}
+        </select>
+        </div>
+    <div>
+        <input id="but_edit" type="button" value="提交"/>
+    </div>
+    </form>
+    </div>
+</div>
+<div class="del_host hide">
+    <div style="margin-left: 25%;margin-top:10%;">
+    <form  id="del_form" method="post" action="manage">
+        <input name="hid" type="text" style="display: none"/>
+        <input name="name" type="text" />
+        <input name="ip" type="text" />
+        <input name="port" type="text"/>
+        <div>
+        <select name="bid">
+            {% for foo in BussinessList %}
+            <option value="{{ foo.id }}">{{ foo.Bname }}</option>
+            {% endfor %}
+        </select>
+        </div>
+    <div>
+        <input id="but_del" type="button" value="确认"/>
+    </div>
+    </form>
+    </div>
+</div>
+<script src="/static/jquery.js">
+</script>
+
+<script>
+    $('#addhost').click(function () {
+        $('.add_host,.shade').removeClass('hide')
+    })
+    $('#cancel').click(function () {
+        $('.add_host,.shade').addClass('hide')
+    })
+    $('.edit').click(function () {
+         $('.edit_host,.shade').removeClass('hide')
+         var bid=$(this).parent().parent().attr('bid')
+         var hid=$(this).parent().parent().attr('hid')
+         var name=$(this).parent().parent().find('td[name="name"]').text()
+         var ip=$(this).parent().parent().find('td[name="ip"]').text()
+         var port=$(this).parent().parent().find('td[name="port"]').text()
+         $('#edit_form').find('input[name="hid"]').val(hid)
+         $('#edit_form').find('input[name="name"]').val(name)
+         $('#edit_form').find('input[name="ip"]').val(ip)
+         $('#edit_form').find('input[name="port"]').val(port)
+         $('#edit_form').find('select').val(bid)
+    })
+    $('#but_edit').click(function () {
+      $.ajax({
+          url:'edit',
+          type:"POST",
+          data:$('#edit_form').serialize(),
+          success:function (data) {
+             alert(data)
+          }
+      })
+        location.reload()
+    })
+    $('.delete').click(function () {
+        $('.del_host, .shade').removeClass('hide')
+         var bid=$(this).parent().parent().attr('bid')
+         var hid=$(this).parent().parent().attr('hid')
+         var name=$(this).parent().parent().find('td[name="name"]').text()
+         var ip=$(this).parent().parent().find('td[name="ip"]').text()
+         var port=$(this).parent().parent().find('td[name="port"]').text()
+         $('#del_form').find('input[name="hid"]').val(hid)
+         $('#del_form').find('input[name="name"]').val(name)
+         $('#del_form').find('input[name="ip"]').val(ip)
+         $('#del_form').find('input[name="port"]').val(port)
+         $('#del_form').find('select').val(bid)
+    })
+    $('#but_del').click(function () {
+      $.ajax({
+          url:'edit',
+          type:"POST",
+          data:{'option':'del','hid':$('#del_form').find('input[name="hid"]').val()},
+          success:function (data) {
+             alert(data)
+          }
+      })
+        location.reload()
+    })
+</script>
+</body>
+</html>

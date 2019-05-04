@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE users SYSTEM "rule.dtd">
+<users>
+    <user>
+        <name></name>
+        <age></age>
+        <addr></addr>
+    </user>
+</users>

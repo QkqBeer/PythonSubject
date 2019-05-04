@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pg_head {
+            background-color: rgba(221, 221, 221, 0.93);
+            color: white;
+            font-size: large;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 38px;
+            line-height: 38px;
+        }
+
+        .pg_body {
+            margin-top: 40px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div style="position: relative;width:1300px">
+    <!--标头-->
+    <div class="pg_head">
+        <div style=" width: 60%;margin: 0 auto;">
+            <div style="float:left">*收藏本站</div>
+            <div style="float:right">
+                <a>登录</a>
+                <a>注册</a>
+                <a>我的订单</a>
+                <a>VIP俱乐部</a>
+            </div>
+        </div>
+    </div>
+    <div class="pg_body">
+        <div style=" width: 70%;margin: 0 auto;">
+            <span style="display: inline-block;height: 60px;width:150px;background-image: url(homework.png);background-repeat: no-repeat;background-position-x: -125px;background-position-y: -90px; ">
+            </span>
+            <div style="border: solid rgba(221,221,221,0.3) 1px; width: 100%;height: 500px">
+                <div style="width:50% ;height:100% ;margin-left:10%;float: left;">
+                    <div>
+                        <h3>注册新的用户</h3>
+                    </div>
+                    <div style="text-align: right;float: left">
+                        <div style="margin-left:20px;margin-top:20px;position:relative">
+                            <span style="color: red">*</span>
+                            <span style="font-size: large">用户名：</span>
+                            <input id="username" class="input" type="text" style="height: 30px;width:260px">
+                            <div class="hide" style="width:100px;height:50px;border: solid red 1px; position: absolute;top: 0px;left:380px;">username 不能为空！！</div>
+                        </div>
+                        <div style="margin-left:20px;margin-top:20px;position:relative">
+                            <span style="color: red">*</span>
+                            <span style="font-size: large">手机号：</span>
+                            <input id="phonenum" class="input" type="text" style="height: 30px;width:260px">
+                            <div class="hide" style="width:100px;height:50px;border: solid red 1px; position: absolute;top: 0px;left:380px;">phonenum 不能为空！！</div>
+                        </div>
+                        <div style="margin-left: 20px;margin-top:20px;position:relative">
+                            <span style="color: red">*</span>
+                            <span style="font-size: large">登录密码：</span>
+                            <input id="password" class="input" type="password" style="height: 30px;width:260px">
+                            <div class="hide" style="width:100px;height:50px;border: solid red 1px; position: absolute;top: 0px;left:380px;">password 不能为空！！</div>
+                        </div>
+                        <div style="margin-left: 20px;margin-top:20px;position:relative">
+                            <span style="color: red">*</span>
+                            <span style="font-size: large">确认密码：</span>
+                            <input id="secondpassword" class="input" type="password" style="height: 30px;width:260px">
+                            <div class="hide" style="width:150px;height:50px;border: solid red 1px; position: absolute;top: 0px;left:380px;">secondpassword 不能为空！！</div>
+                        </div>
+                        <div style="margin-left: 20px;margin-top:30px">
+                            <input type="checkbox">
+                            <span>我已阅读并同意</span>
+                            <a href="www.baidu.com">《用户注册协议》</a>
+                        </div>
+                        <div style="margin-left: 20px;margin-top:30px">
+                            <input type="button" value="同意以上协议并注册"
+                                   onclick="dianji()"
+                                   style="background-color: red;color: white;font-size: large;border: 0px;
+                                         width: 260px;height: 30px;line-height: 30px;text-align: center;">
+                        </div>
+                    </div>
+                </div>
+                <div style="width:30%;height:400px;margin-right:10%;margin-top:50px;float: right;">
+                    <div style="font-size: large">
+                        我已经注册，现在就登陆
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function dianji() {
+
+        var flag = 1;
+        var id = 0;
+        input_list = document.getElementsByClassName('input');
+        for(var j=0;j<input_list.length;j++){
+             parent_list1=input_list[j].parentElement;
+             tag_parent_childenlist1=parent_list1.children;
+             tag_parent_childenlist1[3].classList.add('hide')
+        }
+        for (var i = 0; i < input_list.length; i++) {
+            if (input_list[i].value == "") {
+                flag = 0;
+                id = i;
+                break;
+            }
+            else {
+                flag = 1;
+            }
+        }
+        if (flag == 0) {
+            parent_list=input_list[i].parentElement;
+            tag_parent_childenlist=parent_list.children;
+            tag_parent_childenlist[3].classList.remove('hide')
+        }
+        else {
+            alert("注册成功")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="three.js"></script>
+     <script type="text/javascript" src="jquery-1.9.0.js"></script>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="WebGL-output">
+
+</div>
+<script type="text/javascript">
+    $(function (){
+        //声明场景
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(45,
+        window.innerWidth / window.innerHeight, 1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor('#FFFFFF');
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement)
+    var geometry = new THREE.CubeGeometry(10, 10, 10)
+    var material = new THREE.MeshBasicMaterial({color:0xff0000});
+    var cube = new THREE.Mesh(geometry, material)
+    scene.add(cube);
+    camera.position.x = -30;
+    camera.position.y = 50;
+    camera.position.z = 30;
+    camera.lookAt(scene.position)
+    function render() {
+        requestAnimationFrame(render)
+        cube.rotation.x -= 0.01
+        renderer.render(scene, camera)
+    }
+    })
+</script>
+
+
+</body>
+</html>
